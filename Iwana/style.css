@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #0f4c51;
+  --dark-opacity: rgba(79, 16, 16, 0.925);
+  --light: rgb(9, 82, 106);
+  --light-opacity: rgba(45, 239, 145, 0.8);
+  --white: #eeeeee;
+  --main-font: "Aria", "Helvetica" sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1, h2, li, p {
+  font-family: var(--main-font);
+}
+
+button {
+  cursor: pointer;
+}
+
+#popup {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--dark-opacity);
+  color: var(--white);
+  max-width: 40rem;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  padding: 3rem;
+  border: 5px var(--light) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#timetravel{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 1;
+
+}
+
+#scene{
+ position: relative;
+ z-index: 0;
+}
+
+#popup button {
+  padding: 1rem;
+  border: 5px var(--light) solid;
+  font-family: var(--main-font);
+  font-size: 1.2rem;
+  color: var(--dark);
+}
+
+#music-button {
+  position: fixed;
+  z-index: 1;
+  right: 1.5rem;
+  top: 5rem;
+  font-family: var(--main-font);
+  font-size: 2rem;
+  background: var(--dark-opacity);
+  color: var(--white);
+  border: 3px var(--light) solid;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 4px;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
