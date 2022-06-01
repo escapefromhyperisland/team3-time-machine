@@ -1,4 +1,4 @@
-AFRAME.registerComponent("scale-on-mouseclick", {
+AFRAME.registerComponent("scale-down-on-mouseclick", {
   schema: {
     to: {default: "0.5 0.5 0.5", type: "vec3"}
   },
@@ -8,6 +8,24 @@ AFRAME.registerComponent("scale-on-mouseclick", {
     var el = this.el;
     this.el.addEventListener("click", function () {
       el.object3D.scale.copy(data.to);
+    });
+  }
+});
+
+AFRAME.registerComponent("scale-up-on-mouseclick", {
+  schema: {
+    to: {default: "3 3 3", type: "vec3"}
+  },
+
+  init: function () {
+    var data = this.data;
+    var el = this.el;
+    this.el.addEventListener("click", function () {
+      el.object3D.scale.copy(data.to);
+    // here should the y-position been updatet to more than 0.16 (perhaps 0.55) 
+    // perhaps with mouseenter, -leave?
+    // and make the rotation -180 and the animation stop
+    // take away the changes when leaving??
     });
   }
 });
