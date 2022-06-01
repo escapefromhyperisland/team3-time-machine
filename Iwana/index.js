@@ -13,6 +13,7 @@ AFRAME.registerComponent("scale-on-mouseclick", {
 });
 
 const background = new Audio("./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3")
+const travelvideo = 
 background.volume = 0.2;
 background.loop = true;
 let musicIsPlaying = true;
@@ -27,10 +28,12 @@ function handleMusic () {
 
 function closePopup() {
   document.querySelector("#popup").style.visibility = "hidden";
+  document.querySelector("#travel-video").play()
+  document.querySelector("#background-black").style.visibility = "hidden";
 
   setTimeout(()=>{
     background.play()
     document.querySelector("#timetravel").style.visibility = "hidden";
     document.querySelector("#music-button").style.visibility = "visible";
-  }, 2000)
+  }, 7000)
 }

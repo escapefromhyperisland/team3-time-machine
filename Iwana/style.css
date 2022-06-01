@@ -39,7 +39,7 @@ button {
 
 #popup {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -55,7 +55,13 @@ button {
   justify-content: space-between;
   font-family: var(--intro-font);
 }
-
+#background-black{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 2;
+}
 #timetravel{
   position: fixed;
   height: 100vh;
@@ -63,6 +69,11 @@ button {
   background: black;
   z-index: 1;
 
+}
+
+#timetravel video{
+  height: 100vh;
+  width: 100vw;
 }
 
 #scene{

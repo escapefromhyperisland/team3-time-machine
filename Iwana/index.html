@@ -14,7 +14,7 @@
 
   <body>
     <script src="index.js"></script>
-
+    <!--WORKS SO WHEN ASSETS IN THEN LOAD-->
     <div id="popup">
       <p>
         “Oh…….. what is this on my head….… I feel dizzy………. a BUMP!?!…….. what happened…… Oh wait….WAIT…. my time-machine!!…..I think somebody used it?!?!?…. ##€%!?&!…… damn, I knew I did too good on the user-interface!!… MY GOSH!! The WORLD is in danger!! If this person leaves anything behind, the time-line will break and the world explodes!!!!!!”
@@ -23,8 +23,13 @@
       <button onclick="closePopup()">Chase the person and save the world!</button>
     
     </div>
+    <div id="background-black">
+    </div>
+    
     <div id="timetravel">
-      <video src=""></video>
+      <video id="travel-video">
+        <source src="./assets/time_travel_1.mp4" type="video/mp4"> 
+      </video>
     </div>
       
     <div>
@@ -34,7 +39,8 @@
     <a-scene id="scene">
 
       <a-assets>
-        <a-asset-items id="fox" src="./assets/fox/scene.gltf"></a-asset-items>
+        <a-asset-item id="fox" src="./assets/fox/scene.gltf"></a-asset-item>
+        <a-asset-item id="lunarglobe" src="./assets/lunarglobe/scene.gltf"></a-asset-item>
         <img id="ground-cobble" src="assets/ground.jpg" /> <!-- https://cdn.aframe.io/a-painter/images/floor.jpg -->
         <!-- <audio src="./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3" autoplay preload></audio> -->
       </a-assets>
@@ -51,6 +57,10 @@
       <a-entity 
         gltf-model="#fox" 
         position="1 1 -5">
+      </a-entity>
+      <a-entity 
+        gltf-model="#lunarglobe" 
+        position="20 0 2" scale="0.3, 0.3, 0.3"> 
       </a-entity>
       <a-sky color="#ECECEC"></a-sky>
       <a-camera>
