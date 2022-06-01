@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Steamwreck';
+  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
+  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
+  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
+  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Steamwreck';
+  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +26,8 @@
   --light: rgb(9, 82, 106);
   --light-opacity: rgba(45, 239, 145, 0.8);
   --white: #eeeeee;
-  --main-font: "Aria", "Helvetica" sans-serif;
+  --intro-font: "Aria", "Helvetica", "sans-serif";
+  --main-font: "Steampunk", "Aria", "Helvetica", sans-serif;
 }
 
 body {
@@ -43,6 +60,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: var(--intro-font);
 }
 
 #timetravel{

@@ -26,11 +26,11 @@ function handleMusic () {
 }
 
 function closePopup() {
-    background.play()
-  document.querySelector("#popup").style.visibility = "hidden"
-  document.querySelector("#music-button").style.visibility = "visible"
+  document.querySelector("#popup").style.visibility = "hidden";
 
-    setTimeout(()=>{
-      document.querySelector("#timetravel").style.visibility = "hidden";
-    })
+  setTimeout(()=>{
+    background.play()
+    document.querySelector("#timetravel").style.visibility = "hidden";
+    document.querySelector("#music-button").style.visibility = "visible";
+  }, 2000)
 }
