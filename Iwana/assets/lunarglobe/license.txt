@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lunar Globe
+* source:	https://sketchfab.com/3d-models/lunar-globe-a1ebd09f35fb4e1eae497c73bf1114d2
+* author:	lavakongen (https://sketchfab.com/lavakongen)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lunar Globe" (https://sketchfab.com/3d-models/lunar-globe-a1ebd09f35fb4e1eae497c73bf1114d2) by lavakongen (https://sketchfab.com/lavakongen) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

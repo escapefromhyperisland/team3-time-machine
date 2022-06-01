@@ -1,0 +1,11 @@
+Model Information:
+* title:	SDC2 Final - Stylized Character
+* source:	https://sketchfab.com/3d-models/sdc2-final-stylized-character-9a9abf13b3f8470fb5784dd229995da4
+* author:	Camille Leclercq (https://sketchfab.com/CamilleLeclercq)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SDC2 Final - Stylized Character" (https://sketchfab.com/3d-models/sdc2-final-stylized-character-9a9abf13b3f8470fb5784dd229995da4) by Camille Leclercq (https://sketchfab.com/CamilleLeclercq) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,19 +1,12 @@
 @font-face {
   font-family: 'Steamwreck';
-  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
-  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
-  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
-  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
+  src: url('./assets/font/SteamwreckBold-e3Xp.ttf') format('truetype');
+  src: url('./assets/font/Steamwreck-07pd.ttf') format('truetype');
+  src: url('./assets/font/SteamwreckBoldItalic-WLBY.ttf') format('truetype');
+  src: url('./assets/font/SteamwreckItalic-aqmE.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Steamwreck';
-  src: url('./assets/SteamwreckBold-e3Xp.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
