@@ -3,7 +3,7 @@ import random
 
 # from ascii_hangman import stages, logo
 
-words = ['sakura', 'kiku', 'shinobi', 'botan']
+words = ['sakura', 'kiku', 'botan', 'tsubaki', 'fuji', 'ume']
 
 
 

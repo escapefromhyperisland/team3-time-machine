@@ -4,7 +4,7 @@ const enter = document.querySelector(".enter");
 
 const firstChallengeInit = () => {
   container.innerHTML += `
-      <img src='./assets/makimono01.png' />
+      <img src='./assets/makimono01.png' alt="challenge 1 instruction"/>
         <div class="input">
         <input
           id="number-input-field"
