@@ -48,7 +48,7 @@
         <img id="clue1" src="./assets/clue1.png" />
         <img id="clue2" src="./assets/clue2.png" />
         <img id="door" src="./assets/door_basic.png" />
-
+        <img id="codebox" src="./assets/Codebox.png" />
 
       </a-assets>
 
@@ -58,7 +58,7 @@
       <a-box src="#wall1" position="-15 5 0" depth="0.1" rotation="0 90 0" width="20" height="10" ></a-box>
       <a-box src="#wall2" position="0 5 -10" depth="0.1" rotation="0 0 0" width="30" height="10" ></a-box>
       <a-box id="ceiling" position="0 10 0" depth="0.1" rotation="-90 0 0" width="30" height="20" color="#000000"></a-box>
-      <a-circle src="#door" position="-14.4 1.4 -7.2" radius="0.7" rotation="0 -270 0"></a-circle>
+      <a-circle src="#door" width="10" position="-14.9 1.4 -7.2" radius="0.7" rotation="0 -270 0"></a-circle>
 
       <a-box src="#clue1" position="-1 0.5 -3" rotation="0 45 0"  animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
       <a-sphere position="-1 1.35 -3" radius="1.35" color="#000000" scale-down-on-mouseclick></a-sphere>
@@ -71,11 +71,26 @@
         scale-up-on-mouseclick 
       ></a-sphere>
 
-      <a-entity
-        text="value: Test do you see this?; color: #212121; background-color: #FFFFFF"
-        position="1 0.75 -3"
-        scale="3 3 3">
-      </a-entity>
+      <a-text
+      src="#codebox"
+      text="value: Codebox; align: center; anchor: align; baseline: center;"
+      position="0 1.35 -3"
+      rotation="0 0 0"
+      geometry="primitive:plane; width: 0.2; heigth: 0.5"
+      repeat="0 0"
+      >
+    </a-text>
+
+      <a-text
+        change-text-on-mouseclick
+        text="value: CODEBOX; align: center; anchor: align; baseline: center;"
+        position="-14.9 1.4 -5.9"
+        rotation="0 90 0"
+        scale=".5 .5 .5"
+        geometry="primitive:plane; height:0.3; width:1; src:#codebox"
+        repeat="0 0">
+      </a-text>
+
       <a-entity gltf-model="#fox" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0"></a-entity>
       <a-entity gltf-model="#lunarglobe" position="6 0 -3" scale="0.05, 0.1, 0.05" rotation="0, -80, 0"></a-entity>
       
@@ -89,7 +104,8 @@
 
 <!--   
 -shadow animate out of the door in like three seconds
--door with the 
+-door with the code
+-how to do the code (input-field? buttons to push? text to click on? )
 
-
+-animate fox
 -->

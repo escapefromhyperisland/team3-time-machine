@@ -34,6 +34,43 @@ AFRAME.registerComponent("scale-up-on-mouseclick", {
   }
 });
 
+
+AFRAME.registerComponent("change-text-on-mouseclick", {
+  // schema: {
+  //   value: {default: "TECHNOLOGY, ART, PHILOSOPHY, GEOGRAPHY, PLAYFULNESS, WITCHERY", type: "array"},
+  // },
+
+    update: function (newData) {
+      const password = ["TECHNOLOGY", "ART", "PHILOSOPHY", "GEOGRAPHY", "PLAYFULNESS", "WITCHERY"]
+      var data = this.data;
+      var el = this.el;
+      console.log("EL attribute value: ", el.getAttribute('text').value)
+      console.log("Data: ", data)
+      console.log("newData: ", newData)
+
+
+      el.addEventListener('click', function (event) {
+        if (el.getAttribute('text').value === "CODEBOX") {
+          el.setAttribute("value", password[0])
+        } else if (el.getAttribute('text').value === "TECHNOLOGY") {
+          el.setAttribute("value", password[1])
+        } else if (el.getAttribute('text').value === "ART") {
+          el.setAttribute("value", password[2])
+        } else if (el.getAttribute('text').value === "PHILOSOPHY") {
+          el.setAttribute("value", password[3])
+        } else if (el.getAttribute('text').value === "GEOGRAPHY") {
+          el.setAttribute("value", password[4])
+        } else if (el.getAttribute('text').value === "PLAYFULNESS") {
+          el.setAttribute("value", password[5])
+        } else if (el.getAttribute('text').value === "WITCHERY") {
+          el.setAttribute("value", password[0])
+        } 
+          // this.flushToDOM()
+      })
+  }
+
+});
+
 const background = new Audio("./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3")
 const travelvideo = 
 background.volume = 0.2;
