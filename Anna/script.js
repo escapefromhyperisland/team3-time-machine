@@ -168,7 +168,7 @@ const password = () => {
     num6clicked === false &&
     num8clicked === false
   ) {
-    window.location.href = "/shinobi.html";
+    window.location.href = "/Anna/shinobi.html";
   }
 };
 
