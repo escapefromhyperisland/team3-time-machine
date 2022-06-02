@@ -37,9 +37,9 @@ const selectOption = (option) => {
   //btn.style.backgroundColor = "green";
   const nextTextNodeId = option.nextText;
   //////////////if-statement has to be changed as soon as I have more than 2 questions///////////////////////
-  if (nextTextNodeId > 2) {
-    return startGame();
-  }
+  //   if (nextTextNodeId > 2) {
+  //     return startGame();
+  //   }
   state = Object.assign(state, option.setState);
   showTextNode(nextTextNodeId);
 };
@@ -51,11 +51,13 @@ const textNodes = [
     options: [
       {
         text: "Going back to sleep.",
-        nextText: 2,
+        nextText: 10,
       },
       {
+        //if the user is choosing this option the room/world should appear
         text: "Checking my environment.",
-        nextText: 2,
+        //next would be the world showing up//maybe just leading to a new page?
+        nextText: 9,
       },
       {
         text: "Scanning my body for injuries.",
@@ -63,8 +65,8 @@ const textNodes = [
         nextText: 2,
       },
       {
-        text: "RUN. FOR. YOUR. LIFE!",
-        nextText: 2,
+        text: "RUN. FOR. MY. LIFE!",
+        nextText: 10,
       },
     ],
   },
@@ -74,21 +76,48 @@ const textNodes = [
     options: [
       {
         text: "This looks like some motherf***ing sci-fi shit, män!",
-        nextText: 3,
+        nextText: 5,
       },
       {
+        //if the user is choosing this option the room/world should appear
         text: "Hmmm, who would decorate the room with all this medieval bagpipes?",
         //soundeffects should come in when pressing that choice!
         setState: { display: true },
-        nextText: 3,
+        //next would be the world showing up//maybe just leading to a new page?
+        nextText: 9,
       },
       {
         text: "Is this not the place I was getting unconscious?",
-        nextText: 3,
+        nextText: 5,
       },
       {
         text: "No shit clue. But it better is an age with painkillers!!!!",
-        nextText: 3,
+        nextText: 5,
+      },
+    ],
+  },
+  {
+    id: 9,
+    text: "The World Appears!",
+    options: [],
+  },
+  {
+    id: 10,
+    text: "Ok bye",
+    options: [
+      {
+        text: "Start Over!",
+        nextText: 1,
+      },
+    ],
+  },
+  {
+    id: 5,
+    text: "You don't get it?!",
+    options: [
+      {
+        text: "Try Again!",
+        nextText: 1,
       },
     ],
   },
