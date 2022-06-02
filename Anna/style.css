@@ -30,20 +30,19 @@ input {
   font-size: 5rem;
 }
 
-#enter-button {
+.enter-button {
+  width: 5rem;
+  height: 5rem;
   border-radius: 10px;
   padding: 1rem;
-  background-color: #196e66;
+  font-size: 1rem;
+  background-color: #1f969a;
 }
-#enter-button:hover:after {
+
+.enter-button:hover:after {
   color: #fff;
   content: "Enter";
-  filter: contrast(50%);
-}
-#enter-button:hover {
-  color: #fff;
-  content: "Enter";
-  filter: contrast(80%);
+  border-bottom: 1px bold rgba(0, 0, 0, 0.283);
 }
 
 .video-wrap {
@@ -128,7 +127,7 @@ input {
 
 #unknown-letters {
   font-size: 18rem;
-  color: aquamarine;
+  color: #1f969a;
 }
 
 #input-btn-container {
@@ -145,21 +144,12 @@ input {
   border-radius: 10px;
 }
 
-#guess_letter_btn {
-  width: 5rem;
-  height: 5rem;
-  background-color: cadetblue;
-  font-size: 1rem;
-  border-radius: 10px;
-  padding: 20px;
-}
-
 .sakura {
   background-color: #000;
   background-image: url("./assets/chohan.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center 65%;
 }
 
 .cho-han-btns-container {
@@ -173,7 +163,32 @@ input {
   width: 10rem;
   height: 10rem;
   font-size: 5rem;
-  padding: 10px;
+  border: 0 solid #135a5d;
   border-radius: 50%;
-  background-color: aquamarine;
+  padding: 0;
+  background: radial-gradient(
+    farthest-corner at 150px 50px,
+    #b0dfe1 0%,
+    #1f969a 60%
+  );
+  font-family: Arial;
+  white-space: nowrap;
+  box-shadow: 0px 20px #135a5d, -10px 40px 10px rgba(139, 138, 138, 0.25);
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #26bfc5;
+}
+.pushed {
+  transform: translateY(20px);
+  background: radial-gradient(
+    farthest-corner at 150px 50px,
+    #b9e4e6 0%,
+    #1f969a 60%
+  );
+  box-shadow: 0px 0px transparent, -5px 20px 10px rgba(0, 0, 0, 0.25);
+}
+
+.tobaku {
+  position: fixed;
+  bottom: 5rem;
 }
