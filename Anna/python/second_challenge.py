@@ -27,4 +27,14 @@ def on_click_letter(*args, **kwargs):
     pyscript.write('unknown-letters', f"{' '.join(display)}")
     letter_input.element.value = ""
     
+    correct = ''.join(display)
+    if correct == chosen_word:
+        print('you did it')
+        pyscript.write('key', "You did it! Change shinobi.html to sakura.html in the url.")
+
+    
+    
+
+
+    
     
