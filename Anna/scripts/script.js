@@ -2,22 +2,18 @@ const container = document.querySelector(".container");
 const imageContainer = document.querySelector(".image-container");
 const enter = document.querySelector(".enter");
 
-const createFirstChallenge = () => {
+const firstChallengeInit = () => {
   container.innerHTML += `
-  <py-title class="text-8xl text-cyan-500">無限城</py-title>
-        <p>You landed into this mysterious Mugen castle which has tons of ninja passages. In order to open one of the doors to get out of this secret chamber, you need a code.</p>
-        <p>BUT everything seems in Japanese. Figure out the numbers, then press the right buttons.</p>
-        
+      <img src='./assets/makimono01.png' />
         <div class="input">
         <input
           id="number-input-field"
-          class="input-filed border flex item-center mr-3 border-grey-300 p-2"
+          class="input-field"
           type="text"
-          placeholder="Type in a number"
         />
         <button
           means="enter"
-          id="my-button"
+          id="enter-button"
           type="submit"
           pys-onClick="on_click_number"
         >
@@ -55,7 +51,7 @@ const kanjiNumbers = () => {
         >
         <img
         id="${shuffledArray[i] + 1}"
-        style="width: 200px; height: 200px"
+        style="width: 150px; height: 150px"
         class="grid-img"
         src="./assets/0${shuffledArray[i]}.png"
         alt="${shuffledArray[i] + 1}"
@@ -172,6 +168,6 @@ const password = () => {
   }
 };
 
-createFirstChallenge();
+firstChallengeInit();
 
 kanjiNumbers();
