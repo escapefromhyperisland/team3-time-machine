@@ -11,7 +11,6 @@ h1 {
 h2 {
   font-size: 2rem;
 }
-
 p {
   color: #fff;
 }
@@ -19,15 +18,31 @@ input {
   color: #000;
 }
 
-#my-button {
-  border-radius: 10px;
-  padding: 1rem;
-  background-color: purple;
+.title {
+  width: 100vw;
+  height: 20vh;
 }
 
-#my-button:hover:after {
+.input-field {
+  border-radius: 10px;
+  width: 5rem;
+  height: 5rem;
+  font-size: 5rem;
+}
+
+.enter-button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #1f969a;
+}
+
+.enter-button:hover:after {
   color: #fff;
   content: "Enter";
+  border-bottom: 1px bold rgba(0, 0, 0, 0.283);
 }
 
 .video-wrap {
@@ -83,10 +98,11 @@ input {
 
 .nums_enter {
   display: flex;
+  justify-content: space-around;
+  margin: 0 7rem;
 }
 
 .image-container {
-  margin: 0 3rem;
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
@@ -95,8 +111,8 @@ input {
 }
 
 .numbers {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 .enter {
@@ -106,12 +122,12 @@ input {
 .active {
   filter: grayscale(100%);
   /* transform: scale(0.85);
-    box-shadow: 3px 2px 25px 1px rgba(0, 0, 0, 0.25); */
+  box-shadow: 3px 2px 25px 1px rgba(0, 0, 0, 0.25); */
 }
 
 #unknown-letters {
   font-size: 18rem;
-  color: aquamarine;
+  color: #1f969a;
 }
 
 #input-btn-container {
@@ -128,11 +144,51 @@ input {
   border-radius: 10px;
 }
 
-#guess_letter_btn {
-  width: 5rem;
-  height: 5rem;
-  background-color: cadetblue;
-  font-size: 1rem;
-  border-radius: 10px;
-  padding: 20px;
+.sakura {
+  background-color: #000;
+  background-image: url("./assets/chohan.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 65%;
+}
+
+.cho-han-btns-container {
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chohanBtns {
+  width: 10rem;
+  height: 10rem;
+  font-size: 5rem;
+  border: 0 solid #135a5d;
+  border-radius: 50%;
+  padding: 0;
+  background: radial-gradient(
+    farthest-corner at 150px 50px,
+    #b0dfe1 0%,
+    #1f969a 60%
+  );
+  font-family: Arial;
+  white-space: nowrap;
+  box-shadow: 0px 20px #135a5d, -10px 40px 10px rgba(139, 138, 138, 0.25);
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #26bfc5;
+}
+.pushed {
+  transform: translateY(20px);
+  background: radial-gradient(
+    farthest-corner at 150px 50px,
+    #b9e4e6 0%,
+    #1f969a 60%
+  );
+  box-shadow: 0px 0px transparent, -5px 20px 10px rgba(0, 0, 0, 0.25);
+}
+
+.tobaku {
+  position: fixed;
+  bottom: 5rem;
 }

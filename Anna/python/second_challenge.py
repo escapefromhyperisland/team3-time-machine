@@ -3,7 +3,7 @@ import random
 
 # from ascii_hangman import stages, logo
 
-words = ['sakura', 'kiku', 'shinobi', 'botan']
+words = ['sakura', 'kiku', 'botan', 'tsubaki', 'fuji', 'ume']
 
 
 
@@ -26,5 +26,15 @@ def on_click_letter(*args, **kwargs):
             display[index] = input_value.lower()
     pyscript.write('unknown-letters', f"{' '.join(display)}")
     letter_input.element.value = ""
+    
+    correct = ''.join(display)
+    if correct == chosen_word:
+        print('you did it')
+        pyscript.write('key', "You did it! Change shinobi.html to sakura.html in the url.")
+
+    
+    
+
+
     
     

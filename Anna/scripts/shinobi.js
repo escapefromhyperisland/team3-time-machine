@@ -2,14 +2,14 @@ const secondChallenge = document.querySelector(".second-challenge");
 const guessedWord = document.getElementById("unknown-letters");
 const secondChallengeInit = () => {
   secondChallenge.innerHTML += `
-    <py-title>Hangman</py-title>
+      <img src="../assets/makimono02.png" alt="challenge 2 instruction"/>
       <div id="input-btn-container">
         <input id="letter_input"></input>
-        <button id="guess_letter_btn" pys-onClick="on_click_letter">Click</button>
+        <button id="guess_letter_btn" class='enter-button' pys-onClick="on_click_letter">入力</button>
       </div>
       <div id="unknown-letters"></div>
       <div id='key'></div>
-      <py-script src="second_challenge.py"></py-script>
+      <py-script src="../python/second_challenge.py"></py-script>
     `;
 };
 
