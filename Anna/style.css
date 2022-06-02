@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  color: #fff;
+}
+input {
+  color: #000;
+}
+
+#my-button {
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: purple;
+}
+
+#my-button:hover:after {
+  color: #fff;
+  content: "Enter";
+}
+
+.video-wrap {
+  position: relative;
+}
+
+#bg-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+}
+
+#my-output {
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: 10px white;
+}
+
+.type {
+  color: #fff;
+}
+
+.py-box-container {
+  background-color: #ffffff8c;
+}
+
+.numberIsBox {
+  width: auto;
+  height: auto;
+  margin-left: 1rem;
+  font-size: 3rem;
+  padding: 0 2rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.501);
+}
+
+.nums_enter {
+  display: flex;
+}
+
+.image-container {
+  margin: 0 3rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  justify-items: start;
+  flex-grow: 1;
+}
+
+.numbers {
+  width: 200px;
+  height: 200px;
+}
+
+.enter {
+  margin-top: 3rem;
+  margin-right: 5rem;
+}
+.active {
+  filter: grayscale(100%);
+  /* transform: scale(0.85);
+    box-shadow: 3px 2px 25px 1px rgba(0, 0, 0, 0.25); */
+}
+
+#unknown-letters {
+  font-size: 18rem;
+  color: aquamarine;
+}
+
+#input-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#letter_input {
+  padding: 10px;
+  width: 5rem;
+  height: 5rem;
+  font-size: 5rem;
+  border-radius: 10px;
+}
+
+#guess_letter_btn {
+  width: 5rem;
+  height: 5rem;
+  background-color: cadetblue;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 20px;
+}
