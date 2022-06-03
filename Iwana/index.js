@@ -50,6 +50,8 @@ AFRAME.registerComponent("change-text-on-mouseclick", {
 
 
       el.addEventListener('click', function (event) {
+
+        // const newWord = password.findIndex(el.getAttribute('text').value) === -1 ? password[0] : password.findIndex(el.getAttribute('text').value) >= password.length + 1 ? password 
         if (el.getAttribute('text').value === "CODEBOX") {
           el.setAttribute("value", password[0])
         } else if (el.getAttribute('text').value === "TECHNOLOGY") {
