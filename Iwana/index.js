@@ -40,13 +40,11 @@ AFRAME.registerComponent("change-text-on-mouseclick", {
   //   value: {default: "TECHNOLOGY, ART, PHILOSOPHY, GEOGRAPHY, PLAYFULNESS, WITCHERY", type: "array"},
   // },
 
-    update: function (newData) {
+    update: function () {
       const password = ["TECHNOLOGY", "ART", "PHILOSOPHY", "GEOGRAPHY", "PLAYFULNESS", "WITCHERY"]
       var data = this.data;
+      console.log("DATA: ", data)
       var el = this.el;
-      console.log("EL attribute value: ", el.getAttribute('text').value)
-      console.log("Data: ", data)
-      console.log("newData: ", newData)
 
 
       el.addEventListener('click', function (event) {

@@ -1,0 +1,11 @@
+Model Information:
+* title:	SteamPunk Seahorse
+* source:	https://sketchfab.com/3d-models/steampunk-seahorse-db0d3431f8f049d2824818c937f393a7
+* author:	SatiKudasati (https://sketchfab.com/SatiKudasati)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SteamPunk Seahorse" (https://sketchfab.com/3d-models/steampunk-seahorse-db0d3431f8f049d2824818c937f393a7) by SatiKudasati (https://sketchfab.com/SatiKudasati) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
