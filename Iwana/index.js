@@ -41,7 +41,7 @@ AFRAME.registerComponent("change-text-on-mouseclick", {
   // },
 
     update: function () {
-      const password = ["TECHNOLOGY", "ART", "PHILOSOPHY", "GEOGRAPHY", "PLAYFULNESS", "WITCHERY"]
+      const password = ["ART", "TECHNOLOGY", "PHILOSOPHY", "GEOGRAPHY", "PLAYFULNESS", "WITCHERY"]
       var data = this.data;
       console.log("DATA: ", data)
       var el = this.el;
@@ -52,9 +52,9 @@ AFRAME.registerComponent("change-text-on-mouseclick", {
         // const newWord = password.findIndex(el.getAttribute('text').value) === -1 ? password[0] : password.findIndex(el.getAttribute('text').value) >= password.length + 1 ? password 
         if (el.getAttribute('text').value === "CODEBOX") {
           el.setAttribute("value", password[0])
-        } else if (el.getAttribute('text').value === "TECHNOLOGY") {
-          el.setAttribute("value", password[1])
         } else if (el.getAttribute('text').value === "ART") {
+          el.setAttribute("value", password[1])
+        } else if (el.getAttribute('text').value === "TECHNOLOGY") {
           el.setAttribute("value", password[2])
         } else if (el.getAttribute('text').value === "PHILOSOPHY") {
           el.setAttribute("value", password[3])
@@ -63,6 +63,78 @@ AFRAME.registerComponent("change-text-on-mouseclick", {
         } else if (el.getAttribute('text').value === "PLAYFULNESS") {
           el.setAttribute("value", password[5])
         } else if (el.getAttribute('text').value === "WITCHERY") {
+          el.setAttribute("value", password[0])
+        } 
+          // this.flushToDOM()
+      })
+  }
+
+});
+
+AFRAME.registerComponent("change-text1-on-mouseclick", {
+  // schema: {
+  //   value: {default: "TECHNOLOGY, ART, PHILOSOPHY, GEOGRAPHY, PLAYFULNESS, WITCHERY", type: "array"},
+  // },
+
+    update: function () {
+      const password = ["IS", "CAN", "DOES", "SAYS", "MEANS", "LETS"]
+      var data = this.data;
+      console.log("DATA: ", data)
+      var el = this.el;
+
+
+      el.addEventListener('click', function (event) {
+
+        // const newWord = password.findIndex(el.getAttribute('text').value) === -1 ? password[0] : password.findIndex(el.getAttribute('text').value) >= password.length + 1 ? password 
+        if (el.getAttribute('text').value === "CODEBOX") {
+          el.setAttribute("value", password[0])
+        } else if (el.getAttribute('text').value === "IS") {
+          el.setAttribute("value", password[1])
+        } else if (el.getAttribute('text').value === "CAN") {
+          el.setAttribute("value", password[2])
+        } else if (el.getAttribute('text').value === "DOES") {
+          el.setAttribute("value", password[3])
+        } else if (el.getAttribute('text').value === "SAYS") {
+          el.setAttribute("value", password[4])
+        } else if (el.getAttribute('text').value === "MEANS") {
+          el.setAttribute("value", password[5])
+        } else if (el.getAttribute('text').value === "LETS") {
+          el.setAttribute("value", password[0])
+        } 
+          // this.flushToDOM()
+      })
+  }
+
+});
+
+AFRAME.registerComponent("change-text2-on-mouseclick", {
+  // schema: {
+  //   value: {default: "TECHNOLOGY, ART, PHILOSOPHY, GEOGRAPHY, PLAYFULNESS, WITCHERY", type: "array"},
+  // },
+
+    update: function () {
+      const password = ["NOTHING", "MOONSHINE", "SOMETHING", "THE WORLD", "EVERYTHING", "SUNSHINE"]
+      var data = this.data;
+      console.log("DATA: ", data)
+      var el = this.el;
+
+
+      el.addEventListener('click', function (event) {
+
+        // const newWord = password.findIndex(el.getAttribute('text').value) === -1 ? password[0] : password.findIndex(el.getAttribute('text').value) >= password.length + 1 ? password 
+        if (el.getAttribute('text').value === "CODEBOX") {
+          el.setAttribute("value", password[0])
+        } else if (el.getAttribute('text').value === "NOTHING") {
+          el.setAttribute("value", password[1])
+        } else if (el.getAttribute('text').value === "MOONSHINE") {
+          el.setAttribute("value", password[2])
+        } else if (el.getAttribute('text').value === "SOMETHING") {
+          el.setAttribute("value", password[3])
+        } else if (el.getAttribute('text').value === "THE WORLD") {
+          el.setAttribute("value", password[4])
+        } else if (el.getAttribute('text').value === "EVERYTHING") {
+          el.setAttribute("value", password[5])
+        } else if (el.getAttribute('text').value === "SUNSHINE") {
           el.setAttribute("value", password[0])
         } 
           // this.flushToDOM()
