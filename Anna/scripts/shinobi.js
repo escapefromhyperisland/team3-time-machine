@@ -16,6 +16,7 @@ const secondChallengeInit = () => {
   document.getElementById("key").addEventListener("click", () => {
     window.location.href = "../pages/sakura.html";
   });
+  git;
 };
 
 secondChallengeInit();
