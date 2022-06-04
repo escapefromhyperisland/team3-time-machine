@@ -139,10 +139,22 @@ input {
 
 #letter_input {
   padding: 10px;
-  width: 5rem;
+  width: 12rem;
   height: 5rem;
-  font-size: 5rem;
+  font-size: 1.5rem;
   border-radius: 10px;
+}
+
+#hint {
+  font-size: 3rem;
+}
+
+#key {
+  font-size: 5rem;
+}
+
+#key:hover {
+  cursor: pointer;
 }
 
 .sakura {

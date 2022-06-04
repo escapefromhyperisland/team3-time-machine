@@ -5,9 +5,10 @@ import random
 
 words = ['sakura', 'kiku', 'botan', 'tsubaki', 'fuji', 'ume']
 
+hints = ['Japanese unofficial national flower which brings spring.', 'one of the national seals and a crest used by the Emperor of Japan and members of the Imperial Family.']
 
-
-chosen_word = words[random.randint(0, 3)]
+index = random.randint(0, 3)
+chosen_word = words[index]
 
 
 display = []
@@ -16,6 +17,8 @@ for x in range(len(chosen_word)):
 
 
 pyscript.write('unknown-letters', f"{' '.join(display)}")
+
+pyscript.write('hint', f"Hint: {hints[index]}")
 
 letter_input = Element('letter_input')
 
@@ -30,7 +33,9 @@ def on_click_letter(*args, **kwargs):
     correct = ''.join(display)
     if correct == chosen_word:
         print('you did it')
-        pyscript.write('key', "You did it! Change shinobi.html to sakura.html in the url.")
+        pyscript.write('hint', "")
+        pyscript.write('key', "You did it! Click HERE!")
+
 
     
     
