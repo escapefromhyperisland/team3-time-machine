@@ -16,7 +16,7 @@
   <body>
     <script src="index.js"></script>
     <!--WORKS SO WHEN ASSETS IN THEN LOAD-->
-    <!-- <div id="popup">
+    <div id="popup">
       <p>
         “Oh…….. what is this on my head….… I feel dizzy………. a BUMP!?!…….. what happened…… Oh wait….WAIT…. my time-machine!!…..I think somebody used it?!?!?…. ##€%!?&!…… damn, I knew I did too good on the user-interface!!… MY GOSH!! The WORLD is in danger!! If this person leaves anything behind, the time-line will break and the world explodes!!!!!!”
       </p>
@@ -35,7 +35,13 @@
       
     <div>
       <button id="music-button" onclick="handleMusic()"><i id="music-icon" class="fas fa-volume-down fa-xs"></i></button>
-    </div> -->
+    </div>
+    <button id="info-button" onclick="displayPopup()">i</button>
+
+    <div id="popup-info">
+      <p>You have to be as fast as possible to chase this person using the time travel machine! Hurry to get to the person!</p>
+      <p>Seems like you cant get out of this room....use the cursor (yellow circle) to click and get the passwords for the codeboxes.</p>
+    </div>
 
     <a-scene id="scene" shadow="type: pcfsoft">
 
@@ -120,7 +126,7 @@
       <a-entity gltf-model="#seahorse"  animation-mixer="clip: *;" position="10.36113 2.12966 -3.97828" scale="0.3 0.3 0.3" rotation="0 140 0"></a-entity>
       <a-entity gltf-model="#heartglass"  animation-mixer="clip: *;" position="-9 0 7"scale="0.4, 0.4, 0.4" rotation="0, 0, 0"></a-entity>
 
-      <a-camera position="-10 1.7 3" rotation="0, 80, 0"> 
+      <a-camera position="-10 1.7 3" rotation="0, 80, 0" look-controls="reverseMouseDrag: true"> 
         <a-cursor color="#FFFF00"></a-cursor>
       </a-camera>
 
@@ -134,10 +140,12 @@
   
   
 -shadow animate out of the door in like three seconds
--how to do the code (input-field? buttons to push? text to click on? )
+- not hardcode the codeword with setattribute in the clickfunction
 -third clue
+- crosshair cursor instead of a ring?
 - text when mouseenter mouseleave with the fox-person...
 - integrate more animations.. 
+-click-sound when clicking on the codeboxes
 
 -fog evtl (but the second clue?!)
 -->

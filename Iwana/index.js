@@ -166,5 +166,6 @@ function closePopup() {
     background.play()
     document.querySelector("#timetravel").style.visibility = "hidden";
     document.querySelector("#music-button").style.visibility = "visible";
+    document.querySelector("#info-button").style.visibility = "visible";
   }, 7000)
 }
