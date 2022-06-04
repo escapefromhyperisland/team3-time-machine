@@ -25,9 +25,10 @@ input {
 
 .input-field {
   border-radius: 10px;
-  width: 5rem;
+  width: 12rem;
   height: 5rem;
-  font-size: 5rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
 }
 
 .enter-button {
