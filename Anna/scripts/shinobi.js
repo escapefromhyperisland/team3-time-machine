@@ -13,6 +13,10 @@ const secondChallengeInit = () => {
       <py-script src="../python/second_challenge.py"></py-script>
     `;
 
+  // document.getElementById("hint").innerHTML == ""
+  //   ? (document.getElementById("modal").style.display = "block")
+  //   : (document.getElementById("modal").style.display = "none");
+
   document.getElementById("key").addEventListener("click", () => {
     window.location.href = "../pages/sakura.html";
   });
