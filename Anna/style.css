@@ -186,19 +186,20 @@ input {
   );
   font-family: Arial;
   white-space: nowrap;
-  box-shadow: 0px 20px #135a5d, -10px 40px 10px rgba(139, 138, 138, 0.25);
+  box-shadow: 0px 20px #135a5d, -10px 30px 10px rgba(139, 138, 138, 0.25);
   cursor: pointer;
   transition: 0.4s;
   background-color: #26bfc5;
 }
 .pushed {
+  color: #000;
   transform: translateY(20px);
   background: radial-gradient(
     farthest-corner at 150px 50px,
-    #b9e4e6 0%,
-    #1f969a 60%
+    #c9d8d8 0%,
+    #d16f32 60%
   );
-  box-shadow: 0px 0px transparent, -5px 20px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px transparent, -5px 15px 7px rgba(139, 138, 138, 0.25);
 }
 
 .tobaku {
@@ -232,4 +233,50 @@ input {
 #modal-hana-content {
   color: #000;
   font-size: 5rem;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe81;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-content {
+  color: #000;
+  font-size: 15rem;
+}
+
+/* The Close Button */
+.close {
+  color: rgb(48, 45, 45);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

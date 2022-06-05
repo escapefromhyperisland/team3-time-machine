@@ -26,5 +26,11 @@ const thirdChallengeInit = () => {
   document.getElementById("cho").addEventListener("click", btnPressed);
   document.getElementById("han").addEventListener("click", btnPressed);
 };
+const btnPressed = (e) => {
+  e.target.classList.toggle("pushed");
+  setTimeout(function () {
+    document.getElementById("modal").style.display = "block";
+  }, 5000);
+};
 
 thirdChallengeInit();
