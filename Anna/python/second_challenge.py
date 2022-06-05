@@ -8,7 +8,7 @@ kanji = ['桜','菊','牡丹', '椿', '藤', '梅']
 
 hints = ['Cherry blossom', 'Chrysanthemum', 'Paeonia suffruticosa', 'Camellia', 'Wisteria floribunda', 'Plum blossom']
 
-index = random.randint(0, 3)
+index = random.randint(0, 5)
 chosen_word = words[index]
 
 
@@ -35,7 +35,7 @@ def on_click_letter(*args, **kwargs):
     if correct == chosen_word:
         print('you did it')
         pyscript.write('hint', "")
-        pyscript.write('key', f"<div class='modal-hana'><div class='modal-hana-content'><p>{kanji[words.index(chosen_word)]}</p><p id='modal-hana-content'>You did it! Click <strong style='color: orange'>HERE!</strong></p></div>")
+        pyscript.write('key', f"<div class='modal-hana'><div class='modal-content'><div style='font-size: 10rem'>{kanji[words.index(chosen_word)]}</div><div>You did it! Click <strong style='color: orange'>HERE!</strong></div></div></div>")
 
 
     
