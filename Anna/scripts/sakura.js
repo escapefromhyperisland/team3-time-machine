@@ -34,3 +34,10 @@ const btnPressed = (e) => {
 };
 
 thirdChallengeInit();
+
+const playagain = () => {
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("cho").classList.contains("pushed")
+    ? document.getElementById("cho").classList.toggle("pushed")
+    : document.getElementById("han").classList.toggle("pushed");
+};
