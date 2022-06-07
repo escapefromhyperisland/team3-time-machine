@@ -21,7 +21,6 @@ const firstChallengeInit = () => {
         >入力</button>
         <div class='numberIsBox' id="number-output"></div>
       </div>
-    
         `;
 };
 
