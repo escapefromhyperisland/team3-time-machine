@@ -282,12 +282,18 @@ input {
   cursor: pointer;
 }
 
-.final {
-  position: relative;
+.final-body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/timetraveler.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .final video {
-  position: relative;
+  position: fixed;
   z-index: 0;
+  top: 20%;
+  left: 35%;
 }
 
 .p-thirdChallenge {
@@ -301,6 +307,7 @@ input {
   right: 0;
   bottom: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1;

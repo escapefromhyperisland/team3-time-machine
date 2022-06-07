@@ -2,7 +2,7 @@ const final = document.querySelector(".final");
 
 (function finalPageInit() {
   final.innerHTML += `
-    <video id="webcam" autoplay playsinline width="1000" height="auto"></video>
+    <video id="webcam" autoplay playsinline width="600" height="auto"></video>
     <canvas id="canvas" class="d-none"></canvas>
     <script src="../scripts/final.js"></script>
     <div class="overlay">
@@ -13,17 +13,17 @@ const final = document.querySelector(".final");
 const webcamElement = document.getElementById("webcam");
 const canvasElement = document.getElementById("canvas");
 const webcam = new Webcam(webcamElement, "user", canvasElement);
-webcam
-  .start()
-  .then((result) => {
-    console.log("webcam started");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
 setTimeout(function () {
+  webcam
+    .start()
+    .then((result) => {
+      console.log("webcam started");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
   document.querySelector(
     ".overlay"
-  ).innerHTML += `<p>YOU ARE THE VILLAIN!!!</p>`;
+  ).innerHTML += `<p>It's you all along...</p><p>but is it the same you?</p>`;
 }, 5000);
