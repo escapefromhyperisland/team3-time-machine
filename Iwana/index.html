@@ -15,7 +15,6 @@
 
   <body>
     <script src="index.js"></script>
-    <!--WORKS SO WHEN ASSETS IN THEN LOAD-->
     <div id="popup">
       <p>
         “Oh…….. what is this on my head….… I feel dizzy………. a BUMP!?!…….. what happened…… Oh wait….WAIT…. my time-machine!!…..I think somebody used it?!?!?…. ##€%!?&!…… damn, I knew I did too good on the user-interface!!… MY GOSH!! The WORLD is in danger!! If this person leaves anything behind, the time-line will break and the world explodes!!!!!!”
@@ -36,10 +35,13 @@
     <div>
       <button id="music-button" onclick="handleMusic()"><i id="music-icon" class="fas fa-volume-down fa-xs"></i></button>
     </div>
-    <button id="info-button" onclick="displayPopup()">i</button>
-
-    <div id="popup-info">
+    <button id="info-button" onclick="togglePopup()">i</button>
+    <div id="popup-info" class="hidden">
+      <h3>Instructions:</h3>
       <p>You have to be as fast as possible to chase this person using the time travel machine! Hurry to get to the person!</p>
+      <p>Use the cursor (yellow circle) to click</p>
+      <br>
+      <h3>Read more if you need a hint:</h3>
       <p>Seems like you cant get out of this room....use the cursor (yellow circle) to click and get the passwords for the codeboxes.</p>
     </div>
 
@@ -121,7 +123,15 @@
         repeat="0 0">
       </a-text>
 
-      <a-entity gltf-model="#fox"  animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0"></a-entity>
+      <a-entity gltf-model="#fox"  animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0">
+        <a-text
+        text="value: We are trapped here.... Only one person found the hidden passwords.....You want to try?; align: center; anchor: align; baseline: center; visibility: visible"
+        position="10.5 2 4"
+        rotation="0 0 0"
+        scale=".5 .5 .5"
+        geometry="primitive:plane; height:2; width:4">
+      </a-text>
+      </a-entity>
       <a-entity gltf-model="#lunarglobe" position="6 0 -3" scale="0.05, 0.1, 0.05" rotation="0, -80, 0"></a-entity>
       <a-entity gltf-model="#seahorse"  animation-mixer="clip: *;" position="10.36113 2.12966 -3.97828" scale="0.3 0.3 0.3" rotation="0 140 0"></a-entity>
       <a-entity gltf-model="#heartglass"  animation-mixer="clip: *;" position="-9 0 7"scale="0.4, 0.4, 0.4" rotation="0, 0, 0"></a-entity>

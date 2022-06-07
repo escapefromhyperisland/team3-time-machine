@@ -144,7 +144,6 @@ AFRAME.registerComponent("change-text2-on-mouseclick", {
 });
 
 const background = new Audio("./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3")
-const travelvideo = 
 background.volume = 0.2;
 background.loop = true;
 let musicIsPlaying = true;
@@ -168,4 +167,8 @@ function closePopup() {
     document.querySelector("#music-button").style.visibility = "visible";
     document.querySelector("#info-button").style.visibility = "visible";
   }, 7000)
+}
+
+function togglePopup() {
+  document.querySelector("#popup-info").classList.toggle("hidden");
 }

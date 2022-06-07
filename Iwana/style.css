@@ -55,6 +55,11 @@ button {
   justify-content: space-between;
   font-family: var(--intro-font);
 }
+
+.hidden{
+  visibility: hidden;
+}
+
 #background-black{
   position: fixed;
   height: 100vh;
