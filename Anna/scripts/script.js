@@ -10,10 +10,12 @@ const firstChallengeInit = () => {
           id="number-input-field"
           class="input-field"
           type="text"
+          placeholder='type a number'
         />
         <button
           means="enter"
           id="enter-button"
+          class='enter-button'
           type="submit"
           pys-onClick="on_click_number"
         >

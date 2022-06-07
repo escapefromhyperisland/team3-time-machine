@@ -4,10 +4,12 @@ import random
 # from ascii_hangman import stages, logo
 
 words = ['sakura', 'kiku', 'botan', 'tsubaki', 'fuji', 'ume']
+kanji = ['桜','菊','牡丹', '椿', '藤', '梅']
 
+hints = ['Cherry blossom', 'Chrysanthemum', 'Paeonia suffruticosa', 'Camellia', 'Wisteria floribunda', 'Plum blossom']
 
-
-chosen_word = words[random.randint(0, 3)]
+index = random.randint(0, 5)
+chosen_word = words[index]
 
 
 display = []
@@ -16,6 +18,8 @@ for x in range(len(chosen_word)):
 
 
 pyscript.write('unknown-letters', f"{' '.join(display)}")
+
+pyscript.write('hint', f"Hint: {hints[index]}")
 
 letter_input = Element('letter_input')
 
@@ -30,7 +34,9 @@ def on_click_letter(*args, **kwargs):
     correct = ''.join(display)
     if correct == chosen_word:
         print('you did it')
-        pyscript.write('key', "You did it! Change shinobi.html to sakura.html in the url.")
+        pyscript.write('hint', "")
+        pyscript.write('key', f"<div class='modal-hana'><div class='modal-content'><div style='font-size: 10rem'>{kanji[words.index(chosen_word)]}</div><div>You did it! Click <strong style='color: orange'>HERE!</strong></div></div></div>")
+
 
     
     

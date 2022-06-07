@@ -18,16 +18,12 @@ input {
   color: #000;
 }
 
-.title {
-  width: 100vw;
-  height: 20vh;
-}
-
 .input-field {
   border-radius: 10px;
-  width: 5rem;
+  width: 12rem;
   height: 5rem;
-  font-size: 5rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
 }
 
 .enter-button {
@@ -138,10 +134,22 @@ input {
 
 #letter_input {
   padding: 10px;
-  width: 5rem;
+  width: 12rem;
   height: 5rem;
-  font-size: 5rem;
+  font-size: 1.5rem;
   border-radius: 10px;
+}
+
+#hint {
+  font-size: 3rem;
+}
+
+#key {
+  font-size: 5rem;
+}
+
+#key:hover {
+  cursor: pointer;
 }
 
 .sakura {
@@ -173,22 +181,128 @@ input {
   );
   font-family: Arial;
   white-space: nowrap;
-  box-shadow: 0px 20px #135a5d, -10px 40px 10px rgba(139, 138, 138, 0.25);
+  box-shadow: 0px 20px #135a5d, -10px 30px 10px rgba(139, 138, 138, 0.25);
   cursor: pointer;
   transition: 0.4s;
   background-color: #26bfc5;
 }
 .pushed {
+  color: #000;
   transform: translateY(20px);
   background: radial-gradient(
     farthest-corner at 150px 50px,
-    #b9e4e6 0%,
-    #1f969a 60%
+    #c9d8d8 0%,
+    #d16f32 60%
   );
-  box-shadow: 0px 0px transparent, -5px 20px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px transparent, -5px 15px 7px rgba(139, 138, 138, 0.25);
 }
 
 .tobaku {
   position: fixed;
   bottom: 5rem;
+}
+
+.modal-hana {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-hana-content {
+  background-color: #fefefe81;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  height: 50%;
+}
+
+#modal-hana-content {
+  color: #000;
+  font-size: 5rem;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe81;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border-radius: 30px;
+  width: 50%; /* Could be more or less, depending on screen size */
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-content {
+  color: #000;
+  font-size: 15rem;
+}
+
+/* The Close Button */
+.close {
+  color: rgb(0, 0, 0);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(42, 23, 23);
+  opacity: 0.7;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.final {
+  position: relative;
+}
+.final video {
+  position: relative;
+  z-index: 0;
+}
+
+.p-thirdChallenge {
+  font-size: 1.5rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.overlay p {
+  font-size: 8rem;
+  color: blue;
 }
