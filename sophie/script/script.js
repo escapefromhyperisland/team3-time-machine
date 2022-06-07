@@ -46,8 +46,10 @@ const selectOption = (option) => {
     var s = document.getElementById("container").style;
     s.opacity = 1;
     (function fade() {
-      (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 40);
+      (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 75);
     })();
+    location.href = "pages/maze.html";
+    //loadScript("maze.js"); //CODE BELOW LOADsCRIPT WON'T BE LOADED
   }
   state = Object.assign(state, option.setState);
   showTextNode(nextTextNodeId);
@@ -110,8 +112,8 @@ const textNodes = [
   },
   {
     id: 9,
-    text: "The World Appears!",
-    options: [],
+    text: "aaaaaaaaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhh!1!!!!!!!!!!!1!!!",
+    //options: [],
   },
   {
     id: 10,
