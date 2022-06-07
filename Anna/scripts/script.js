@@ -18,9 +18,7 @@ const firstChallengeInit = () => {
           class='enter-button'
           type="submit"
           pys-onClick="on_click_number"
-        >
-          入力
-        </button>
+        >入力</button>
         <div class='numberIsBox' id="number-output"></div>
       </div>
     
