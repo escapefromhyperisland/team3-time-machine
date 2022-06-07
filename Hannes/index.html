@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="https://unpkg.com/aframe@latest"></script>
-        <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
-    </head>
-      <body>
-        <a-scene environment="preset:  forest;  skyColor:  #00bfff;  horizonColor:  #a9e5fe;  lightPosition:  1, 1, 1;  ground:  flat;  groundTexture:  walkernoise;  groundColor:  #909627;  groundColor2:  #e3df68;  dressingColor:  #508349;  dressingVariance:  [object Object];  dressingScale:  1;  dressingAmount:  100;  fog:  0.001; lighting: distant;">
-            <a-assets>
-                <!-- <a-asset-item id="land" src="forest.glb"></a-asset-item> -->
-                <a-asset-item id="trex" src="Assets/tboy.glb"></a-asset-item>
-                <a-asset-item id="apat" src="Assets/Apatosaurus.glb"></a-asset-item>
-                <a-asset-item id="steg" src="Assets/Stegosaurus.glb"></a-asset-item>
-                <a-asset-item id="tric" src="Assets/Triceratops.glb"></a-asset-item>
-                <a-asset-item id="velo" src="Assets/Velociraptor.glb"></a-asset-item>
-              
-            </a-assets>
-    
-            <!-- <a-entity gltf-model="#trex" position="6 0 -3" scale="1, 1, 1" rotation="0, -80, 0"></a-entity> -->
-            <a-gltf-model src="#trex" animation-mixer="clip: *;" position="-39 0 21" rotation="0 78 0"></a-gltf-model>
-            <a-gltf-model src="#apat" animation-mixer="clip: *;" position="28 0 26" rotation="0 -28 0"></a-gltf-model>
-            <a-gltf-model src="#steg" animation-mixer="clip: *;" position="-30 0 -40" rotation="0 -20 0"></a-gltf-model>
-            <a-gltf-model src="#tric" animation-mixer="clip: *;" position="-17 0 61" rotation="0 80 0"></a-gltf-model>
-            <a-gltf-model src="#velo" animation-mixer="clip: *;" position="17 0 -46" rotation="0 0 0"></a-gltf-model>
-            <a-gltf-model src="#velo" animation-mixer="clip: *;" position="21 0 -42" rotation="0 0 0"></a-gltf-model>
-            <a-gltf-model src="#velo" animation-mixer="clip: *;" position="11 0 -45" rotation="0 0 0"></a-gltf-model>
-    
-    
-    
-            
-            <!-- <a-plane src="/Sand-014.jpg" depth="10"rotation="-90 0 0" width="100" height="100" repeat="10 10"></a-plane> -->
-            <a-plane src="/Assets/water.jpg" position="10 -0.1 0 " rotation="-90 0 0" width="500" height="500" repeat="50 50"></a-plane>
-    
-            
-    
-    
-        </a-scene>
-      </body>
-    </html>
+  <head>
+    <script src="https://unpkg.com/aframe@latest"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene environment="preset:  forest;  skyColor:  #00bfff;  horizonColor:  #a9e5fe;  lightPosition:  1, 1, 1;  ground:  flat;  groundTexture:  walkernoise;  groundColor:  #909627;  groundColor2:  #e3df68;  dressingColor:  #508349;  dressingVariance:  [object Object];  dressingScale:  1;  dressingAmount:  80;  fog:  0.001; lighting: distant;">
+        <a-assets>
+            <!-- <a-asset-item id="land" src="forest.glb"></a-asset-item> -->
+            <a-asset-item id="trex" src="Assets/tboy.glb"></a-asset-item>
+            <a-asset-item id="apat" src="Assets/Apatosaurus.glb"></a-asset-item>
+            <a-asset-item id="steg" src="Assets/Stegosaurus.glb"></a-asset-item>
+            <a-asset-item id="tric" src="Assets/Triceratops.glb"></a-asset-item>
+            <a-asset-item id="velo" src="Assets/Velociraptor.glb"></a-asset-item>
+            <a-asset-item id="volc" src="Assets/Volcano.glb"></a-asset-item>
+          
+        </a-assets>
+
+        <!-- <a-entity gltf-model="#trex" position="6 0 -3" scale="1, 1, 1" rotation="0, -80, 0"></a-entity> -->
+        <a-gltf-model src="#trex" animation-mixer="clip: *;" position="-39 0 21" rotation="0 79 0"></a-gltf-model>
+        <a-gltf-model src="#apat" animation-mixer="clip: *;" position="28 0 26" rotation="0 -28 0"></a-gltf-model>
+        <a-gltf-model src="#steg" animation-mixer="clip: *;" position="-30 0 -40" rotation="0 -20 0"></a-gltf-model>
+        <a-gltf-model src="#tric" animation-mixer="clip: *;" position="-17 0 61" rotation="0 80 0"></a-gltf-model>
+        <a-gltf-model src="#velo" animation-mixer="clip: *;" position="17 0 -46" rotation="0 0 0"></a-gltf-model>
+        <a-gltf-model src="#velo" animation-mixer="clip: *;" position="21 0 -42" rotation="0 0 0"></a-gltf-model>
+        <a-gltf-model src="#velo" animation-mixer="clip: *;" position="11 0 -45" rotation="0 0 0"></a-gltf-model>
+
+        <a-gltf-model src="#volc" animation-mixer="clip: *;" position="60 0 -57" rotation="0 0 0" scale="80 80 80" ></a-gltf-model>
+
+
+
+        
+        <!-- <a-plane src="/Sand-014.jpg" depth="10"rotation="-90 0 0" width="100" height="100" repeat="10 10"></a-plane> -->
+        <a-plane src="/Assets/water.jpg" position="10 -0.1 0 " rotation="-90 0 0" width="500" height="500" repeat="50 50"></a-plane>
+
+        
+
+
+    </a-scene>
+  </body>
+</html>
