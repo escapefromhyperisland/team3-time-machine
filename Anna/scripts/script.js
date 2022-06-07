@@ -151,7 +151,6 @@ const num7 = document.getElementById("7");
 const num9 = document.getElementById("9");
 
 const password = () => {
-  console.log("nyuryoku pressed");
   if (
     num2clicked === true &&
     num7clicked === true &&
