@@ -350,6 +350,7 @@ input {
   justify-content: center;
   align-items: center;
   z-index: 1;
+  font-size: 5rem;
 }
 
 .itsyou-div p {
