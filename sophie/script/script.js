@@ -46,9 +46,11 @@ const selectOption = (option) => {
     var s = document.getElementById("container").style;
     s.opacity = 1;
     (function fade() {
-      (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 75);
+      (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 130);
     })();
-    location.href = "pages/maze.html";
+    setTimeout(function () {
+      location.href = "pages/maze.html";
+    }, 2000);
     //loadScript("maze.js"); //CODE BELOW LOADsCRIPT WON'T BE LOADED
   }
   state = Object.assign(state, option.setState);
@@ -112,7 +114,7 @@ const textNodes = [
   },
   {
     id: 9,
-    text: "aaaaaaaaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhh!1!!!!!!!!!!!1!!!",
+    text: "ah, what is happening???",
     //options: [],
   },
   {
