@@ -42,5 +42,12 @@ setTimeout(function () {
 
 setTimeout(function () {
   itsyouDiv.style.backgroundColor = "#0000009f";
-  itsyouDiv.innerHTML = `<p>It's you all along...</p><p>but is it the same you?</p>`;
+  itsyouDiv.innerHTML = `<p>It's you all along...</p>`;
 }, 15000);
+
+setTimeout(function () {
+  msgBox.innerHTML = "";
+  document.getElementById("final-body-id").classList.remove("final-body");
+  document.getElementById("final-body-id").classList.add("final-final-body");
+  itsyouDiv.innerHTML = `<p style='font-size: 5rem'>But is it the same you?</p>`;
+}, 18000);
