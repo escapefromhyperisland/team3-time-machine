@@ -289,6 +289,14 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .final video {
   position: fixed;
   z-index: 0;
@@ -300,20 +308,40 @@ input {
   font-size: 1.5rem;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+#msg-box {
+  width: 60vw;
+  height: 20vh;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #0000009f;
+  border-radius: 30px;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+
+.itsyou-div {
+  width: 60vw;
+  height: 20vh;
+  position: fixed;
+  bottom: 10%;
+
+  border-radius: 30px;
+
+  /* background-color: #0000009f; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
 }
 
-.overlay p {
-  font-size: 8rem;
+.itsyou-div p {
+  font-size: 5rem;
   color: blue;
 }

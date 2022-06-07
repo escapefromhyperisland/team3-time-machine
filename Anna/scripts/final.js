@@ -2,17 +2,33 @@ const final = document.querySelector(".final");
 
 (function finalPageInit() {
   final.innerHTML += `
+    <div id='msg-box'></div>
     <video id="webcam" autoplay playsinline width="600" height="auto"></video>
     <canvas id="canvas" class="d-none"></canvas>
     <script src="../scripts/final.js"></script>
-    <div class="overlay">
+    <div class="itsyou-div">
    </div>
     `;
 })();
 
+const msgBox = document.getElementById("msg-box");
 const webcamElement = document.getElementById("webcam");
 const canvasElement = document.getElementById("canvas");
+const itsyouDiv = document.querySelector(".itsyou-div");
 const webcam = new Webcam(webcamElement, "user", canvasElement);
+
+msgBox.innerHTML += `<p>There is the villain!!!!</p>`;
+
+setTimeout(function () {
+  msgBox.innerHTML = `<p>You gotta stop the villain using the time machine again!</p>`;
+}, 2000);
+setTimeout(function () {
+  msgBox.innerHTML = `<p>You: "Hey! Stop!! I'm not letting you slip away!"</p>`;
+}, 5000);
+setTimeout(function () {
+  msgBox.innerHTML = `<p>You reached the villain and the villain turns around...</p>`;
+}, 9000);
+
 setTimeout(function () {
   webcam
     .start()
@@ -22,8 +38,9 @@ setTimeout(function () {
     .catch((err) => {
       console.log(err);
     });
+}, 11000);
 
-  document.querySelector(
-    ".overlay"
-  ).innerHTML += `<p>It's you all along...</p><p>but is it the same you?</p>`;
-}, 5000);
+setTimeout(function () {
+  itsyouDiv.style.backgroundColor = "#0000009f";
+  itsyouDiv.innerHTML = `<p>It's you all along...</p><p>but is it the same you?</p>`;
+}, 15000);
