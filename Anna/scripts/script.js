@@ -5,7 +5,6 @@ const introVideo = document.getElementById("warp-overlay");
 
 const firstChallengeInit = () => {
   setTimeout(function () {
-    console.log("...................overlay");
     document.getElementById("warp-overlay").remove();
     document.getElementById("timetravel-video").remove();
   }, 6000);

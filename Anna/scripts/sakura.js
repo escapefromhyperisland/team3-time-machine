@@ -5,9 +5,9 @@ const thirdChallengeInit = () => {
         <img src="../assets/makimono03.png" alt="challenge 3 instruction"/>
 
         <div class='tobaku'>
-            <p>よろしゅうござんすか？　入ります。</p>
-            <p>さぁ、張った張った！！</p>
-            <p>Click 丁 or 半</p>
+            <p>よろしゅうござんすか？　入ります。- Ready? Here we go.</p>
+            <p>さぁ、張った張った！！ - What's it going to be?! </p>
+          
         </div>
 
         <div class="cho-han-btns-container">
