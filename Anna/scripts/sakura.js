@@ -41,3 +41,7 @@ const playagain = () => {
     ? document.getElementById("cho").classList.toggle("pushed")
     : document.getElementById("han").classList.toggle("pushed");
 };
+
+const toFinalPage = () => {
+  window.location.href = "/Anna/pages/final.html";
+};
