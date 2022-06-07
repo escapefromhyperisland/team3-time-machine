@@ -30,7 +30,9 @@ const showTextNode = (textNodeIndex) => {
 };
 
 const showOption = (option) => {
-  return true;
+  return option.requiredState == null || option.requiredState(state);
+
+  //return true;
 };
 
 const selectOption = (option) => {
@@ -40,6 +42,15 @@ const selectOption = (option) => {
   //   if (nextTextNodeId > 2) {
   //     return startGame();
   //   }
+  if (nextTextNodeId == 9) {
+    var s = document.getElementById("container").style;
+    s.opacity = 1;
+    (function fade() {
+      (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 75);
+    })();
+    location.href = "pages/maze.html";
+    //loadScript("maze.js"); //CODE BELOW LOADsCRIPT WON'T BE LOADED
+  }
   state = Object.assign(state, option.setState);
   showTextNode(nextTextNodeId);
 };
@@ -56,12 +67,14 @@ const textNodes = [
       {
         //if the user is choosing this option the room/world should appear
         text: "Checking my environment.",
+        // requiredState: (currentState) => currentState.world,
+        // setState: { world: true },
         //next would be the world showing up//maybe just leading to a new page?
         nextText: 9,
       },
       {
         text: "Scanning my body for injuries.",
-        setState: { jstag: true },
+        // setState: { jstag: true },
         nextText: 2,
       },
       {
@@ -82,7 +95,8 @@ const textNodes = [
         //if the user is choosing this option the room/world should appear
         text: "Hmmm, who would decorate the room with all this medieval bagpipes?",
         //soundeffects should come in when pressing that choice!
-        setState: { display: true },
+        // requiredState: (currentState) => currentState.world,
+        // setState: { world: false },
         //next would be the world showing up//maybe just leading to a new page?
         nextText: 9,
       },
@@ -98,8 +112,8 @@ const textNodes = [
   },
   {
     id: 9,
-    text: "The World Appears!",
-    options: [],
+    text: "aaaaaaaaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhh!1!!!!!!!!!!!1!!!",
+    //options: [],
   },
   {
     id: 10,
