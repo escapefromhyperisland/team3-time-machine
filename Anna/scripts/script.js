@@ -1,28 +1,36 @@
 const container = document.querySelector(".container");
 const imageContainer = document.querySelector(".image-container");
 const enter = document.querySelector(".enter");
+const introVideo = document.getElementById("warp-overlay");
 
 const firstChallengeInit = () => {
+  setTimeout(function () {
+    console.log("...................overlay");
+    document.getElementById("warp-overlay").remove();
+    document.getElementById("timetravel-video").remove();
+  }, 6000);
   container.innerHTML += `
-      <img src='./assets/makimono01.png' alt="challenge 1 instruction"/>
-        <div class="input">
-        <input
-          id="number-input-field"
-          class="input-field"
-          type="text"
-          placeholder='type a number'
-        />
-        <button
-          means="enter"
-          id="enter-button"
-          class='enter-button'
-          type="submit"
-          pys-onClick="on_click_number"
-        >入力</button>
-        <div class='numberIsBox' id="number-output"></div>
-      </div>
+        <img src='./assets/makimono01.png' alt="challenge 1 instruction"/>
+          <div class="input">
+          <input
+            id="number-input-field"
+            class="input-field"
+            type="text"
+            placeholder='type a number'
+          />
+          <button
+            means="enter"
+            id="enter-button"
+            class='enter-button'
+            type="submit"
+            pys-onClick="on_click_number"
+          >入力</button>
+          <div class='numberIsBox' id="number-output"></div>
+        </div>
         `;
 };
+
+firstChallengeInit();
 
 function shuffleArray(array) {
   let curId = array.length;
@@ -165,7 +173,5 @@ const password = () => {
     window.location.href = "/team3-time-machine/Anna/pages/shinobi.html";
   }
 };
-
-firstChallengeInit();
 
 kanjiNumbers();

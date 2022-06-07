@@ -18,6 +18,10 @@ input {
   color: #000;
 }
 
+#warp-overlay {
+  display: block;
+}
+
 .input-field {
   border-radius: 10px;
   width: 12rem;
@@ -45,7 +49,7 @@ input {
   position: relative;
 }
 
-#bg-video {
+.bg-video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
