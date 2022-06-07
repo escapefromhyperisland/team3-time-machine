@@ -5,11 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/aframe@latest"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <h1>Test :D</h1>
+    <a-scene environment="scale: 0.1, 0.1, 0.1; preset:  forest;  skyColor:  #00bfff;  horizonColor:  #a9e5fe;  lightPosition:  1, 1, 1;  ground:  flat;  groundTexture:  walkernoise;  groundColor:  #909627;  groundColor2:  #e3df68;  dressingColor:  #508349;  dressingVariance:  [object Object];  dressingScale:  1;  dressingAmount:  100;  fog:  0.001; lighting: distant;">
+        <!-- <a-assets>
+            <a-asset-item id="land" src="forest.glb"></a-asset-item>
+        </a-assets> -->
+
+        <a-entity gltf-model="#land">
+            
+          </a-entity> -->
+
+
+        <!-- <a-plane src="/Sand-014.jpg" depth="10"rotation="-90 0 0" width="100" height="100" repeat="10 10"></a-plane> -->
+        <a-plane src="/Hannes/assets/water.jpg" position="10 -0.1 0 " rotation="-90 0 0" width="500" height="500" repeat="10 10"></a-plane>
+
+        
+
+
+    </a-scene>
 
 </body>
 
