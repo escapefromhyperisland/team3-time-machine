@@ -16,7 +16,7 @@ body {
   background-color: #333;
 }
 
-.container {
+#container {
   width: 800px;
   max-width: 80%;
   background-color: ivory;
