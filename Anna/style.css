@@ -18,6 +18,10 @@ input {
   color: #000;
 }
 
+#warp-overlay {
+  display: block;
+}
+
 .input-field {
   border-radius: 10px;
   width: 12rem;
@@ -45,7 +49,7 @@ input {
   position: relative;
 }
 
-#bg-video {
+.bg-video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -200,6 +204,7 @@ input {
 .tobaku {
   position: fixed;
   bottom: 5rem;
+  font-family: "Tapestry", cursive;
 }
 
 .modal-hana {
@@ -231,6 +236,7 @@ input {
 }
 
 .modal {
+  font-family: "Tapestry", cursive;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -278,31 +284,63 @@ input {
   cursor: pointer;
 }
 
-.final {
-  position: relative;
+.final-body {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/timetraveler.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .final video {
-  position: relative;
+  position: fixed;
   z-index: 0;
+  top: 20%;
+  left: 35%;
 }
 
 .p-thirdChallenge {
   font-size: 1.5rem;
 }
 
-.overlay {
-  position: absolute;
+#msg-box {
+  width: 60vw;
+  height: 20vh;
+  position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
+  background-color: #0000009f;
+  border-radius: 30px;
+  font-size: 2rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.itsyou-div {
+  width: 60vw;
+  height: 25vh;
+  position: fixed;
+  bottom: 0;
+  border-radius: 30px;
+  /* background-color: #0000009f; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
 }
 
-.overlay p {
-  font-size: 8rem;
-  color: blue;
+.itsyou-div p {
+  font-size: 4rem;
+  color: rgb(130, 12, 44);
 }

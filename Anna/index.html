@@ -12,9 +12,20 @@
     <title>Challenge 1 in Edo era</title>
   </head>
   <body>
-    <div class="video-wrap">
+    <div id="warp-overlay" class="overlay">
       <video
-        id="bg-video"
+        id="timetravel-video"
+        class="bg-video"
+        src="assets/time_travel_1.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+    </div>
+    <div id="intro-video" class="video-wrap">
+      <video
+        class="bg-video"
         src="assets/Mugen-jo.mp4"
         autoplay
         loop
@@ -33,7 +44,6 @@
             style="width: 150px; height: 350px"
           />
         </button>
-        `;
       </div>
     </div>
     <py-script src="./python/first_challenge.py"> </py-script>
