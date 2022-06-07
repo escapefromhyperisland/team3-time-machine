@@ -1,0 +1,11 @@
+Model Information:
+* title:	Passive Marker Man Walking
+* source:	https://sketchfab.com/3d-models/passive-marker-man-walking-4b1ef9a1d8814e4c9ff4fe668d62bff1
+* author:	digitallysavvy (https://sketchfab.com/hermes.frangoudis)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Passive Marker Man Walking" (https://sketchfab.com/3d-models/passive-marker-man-walking-4b1ef9a1d8814e4c9ff4fe668d62bff1) by digitallysavvy (https://sketchfab.com/hermes.frangoudis) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

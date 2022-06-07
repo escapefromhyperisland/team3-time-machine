@@ -15,7 +15,7 @@
 
   <body>
     <script src="index.js"></script>
-    <div id="popup">
+    <!-- <div id="popup">
       <p>
         “Oh…….. what is this on my head….… I feel dizzy………. a BUMP!?!…….. what happened…… Oh wait….WAIT…. my time-machine!!…..I think somebody used it?!?!?…. ##€%!?&!…… damn, I knew I did too good on the user-interface!!… MY GOSH!! The WORLD is in danger!! If this person leaves anything behind, the time-line will break and the world explodes!!!!!!”
       </p>
@@ -43,7 +43,7 @@
       <br>
       <h3>Read more if you need a hint:</h3>
       <p>Seems like you cant get out of this room....use the cursor (yellow circle) to click and get the passwords for the codeboxes.</p>
-    </div>
+    </div> -->
 
     <a-scene id="scene" shadow="type: pcfsoft">
 
@@ -123,14 +123,9 @@
         repeat="0 0">
       </a-text>
 
-      <a-entity gltf-model="#fox"  animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0">
-        <a-text
-        text="value: We are trapped here.... Only one person found the hidden passwords.....You want to try?; align: center; anchor: align; baseline: center; visibility: visible"
-        position="10.5 2 4"
-        rotation="0 0 0"
-        scale=".5 .5 .5"
-        geometry="primitive:plane; height:2; width:4">
-      </a-text>
+      <a-entity gltf-model="#fox" text-visible-on-hover animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0">
+        <a-sphere visible="false" position="0 1.1 -0.4" radius="0.9" height="0.5" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text__foo="color: #892424; lineHeight: 70; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever ; width: 0.5">
+        </a-sphere>
       </a-entity>
       <a-entity gltf-model="#lunarglobe" position="6 0 -3" scale="0.05, 0.1, 0.05" rotation="0, -80, 0"></a-entity>
       <a-entity gltf-model="#seahorse"  animation-mixer="clip: *;" position="10.36113 2.12966 -3.97828" scale="0.3 0.3 0.3" rotation="0 140 0"></a-entity>
@@ -153,7 +148,6 @@
 - not hardcode the codeword with setattribute in the clickfunction
 -third clue
 - crosshair cursor instead of a ring?
-- text when mouseenter mouseleave with the fox-person...
 - integrate more animations.. 
 -click-sound when clicking on the codeboxes
 

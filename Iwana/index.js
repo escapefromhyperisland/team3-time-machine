@@ -143,6 +143,48 @@ AFRAME.registerComponent("change-text2-on-mouseclick", {
 
 });
 
+AFRAME.registerComponent("text-visible-on-hover", {
+  schema: {
+    visible: {default: "true"}
+  },
+
+  init: function () {
+    var data = this.data;
+    var el = this.el;
+    console.log("Object3D: ", el.object3D.children[0].visible) 
+    // var defaultVisibility = el.getAttribute('visible').value;
+    const defaultVisibility = el.object3D.children[0].visible
+    el.addEventListener('mouseenter', function () {
+      // el.setAttribute('visible', data.visible);
+      el.object3D.children[0].visible = data.visible
+    });
+
+    el.addEventListener('mouseleave', function () {
+      el.object3D.children[0].visible = defaultVisibility;
+    });
+  }
+});
+
+// AFRAME.registerComponent("mouse-enter-text-visible", {
+//   schema: {
+//     to: {default: "true", type: "string"},
+//   },
+
+//   init: function () {
+//     var data = this.data;
+//     var el = this.el;
+//     this.el.addEventListener("mouseenter", function () {
+//       el.object3D.scale.copy(data.to);
+//       el.object3D.position.y = data.positiony;
+//       // el.object3D.radius.set(data.radius);
+//     // here should the y-position been updatet to more than 0.16 (perhaps 0.55) 
+//     // perhaps with mouseenter, -leave?
+//     // and make the rotation -180 and the animation stop
+//     // take away the changes when leaving??
+//     });
+//   }
+// });
+
 const background = new Audio("./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3")
 background.volume = 0.2;
 background.loop = true;
