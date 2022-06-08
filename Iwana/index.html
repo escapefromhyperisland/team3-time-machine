@@ -15,7 +15,7 @@
 
   <body>
     <script src="index.js"></script>
-    <div id="popup">
+    <!-- <div id="popup">
       <p>
         “Oh…….. what is this on my head….… I feel dizzy………. a BUMP!?!…….. what happened…… Oh wait….WAIT…. my time-machine!!…..I think somebody used it?!?!?…. ##€%!?&!…… damn, I knew I did too good on the user-interface!!… MY GOSH!! The WORLD is in danger!! If this person leaves anything behind, the time-line will break and the world explodes!!!!!!”
       </p>
@@ -54,15 +54,19 @@
         <br/>
         <button id="next-level-button" onclick="nextLevel()">.......HURRY!!!!!!!!!!</button>
       </div>
-    </div>
+    </div> -->
 
     <a-scene id="scene" shadow="type: pcfsoft" vr-mode-ui="false" cursor="rayOrigin: mouse">
 
       <a-assets>
+        <a-asset-item id="new" src="./assets/new/scene.gltf"></a-asset-item>
+        <a-asset-item id="airshipfish" src="./assets/airshipfish/scene.gltf"></a-asset-item>
+        <a-asset-item id="plantinbox" src="./assets/plantinbox/scene.gltf"></a-asset-item>
+        <a-asset-item id="steamboat" src="./assets/steamboat/scene.gltf"></a-asset-item>
+
         <a-asset-item id="fox" src="./assets/fox/scene.gltf"></a-asset-item>
         <a-asset-item id="seahorse" src="./assets/seahorse/scene.gltf"></a-asset-item>
         <a-asset-item id="heartglass" src="./assets/heartglass/scene.gltf"></a-asset-item>
-        <!-- <a-asset-item id="lunarglobe" src="./assets/lunarglobe/scene.gltf"></a-asset-item> -->
         <img id="ground-cobble" src="./assets/ground.jpg" /> <!--https://cdn.aframe.io/a-painter/images/floor.jpg -->
         <audio id="getout" src="./assets/500616__vanishedillusion__get-out.wav" preload="auto"></audio>
         <img id="wall1" src="./assets/steampunkwall1.jpeg" />
@@ -127,12 +131,17 @@
       </a-text>
 
       <a-entity gltf-model="#fox" class="clickable" text-visible-on-hover animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0" shadow>
-        <a-sphere visible="false" position="0 1.1 -0.4" radius="0.6" height="0.5" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text__foo="color: #892424; lineHeight: 70; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever........ ; width: 0.5; align: center; anchor: align; baseline: center;">
+        <a-sphere visible="false" position="0 1.1 -0.4" radius="0.6" height="0.5" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text__foo="color: #892424; lineHeight: 70; side: double; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever........ ; width: 0.5; align: center; anchor: align; baseline: center;">
         </a-sphere>
       </a-entity>
-      <!-- <a-entity gltf-model="#lunarglobe" position="6 0 -3" scale="0.05, 0.1, 0.05" rotation="0, -80, 0" shadow></a-entity> -->
       <a-entity gltf-model="#seahorse" class="clickable" animation-mixer="clip: *;" position="10.36113 2.12966 -3.97828" scale="0.3 0.3 0.3" rotation="0 140 0" sound="src: #getout; on: click" shadow></a-entity>
-      <a-entity gltf-model="#heartglass"  animation-mixer="clip: *;" position="-9 0 7"scale="0.4, 0.4, 0.4" rotation="0, 0, 0" shadow></a-entity>
+      
+      <a-entity gltf-model="#steamboat" text-visible-on-hover animation-mixer="clip: *;" position="-8.4 1.8 7.3"scale="0.4, 0.4, 0.4" rotation="0, 0, 0" shadow>
+        <a-sphere visible="false" position="0 1.5 -0.4" radius="0.8" rotation="0 260 0" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text="color: #892424; side: double;  value: I can fly! Fly with me! ; align: center; anchor: align; baseline: center;">
+        </a-sphere>
+      </a-entity>
+      <a-sphere position="-9 0.9 7" radius="0.9" color="#000000" material="color:  #a51d1d; opacity: 0.6; metalness: .8; blending:  multiply;  emissive:  #272020;  emissiveIntensity:  0.01;" shadow></a-sphere>
+      <a-sphere position="-9 0.9 7" radius="0.45" color="#000000"  shadow></a-sphere>
 
 
       <a-camera position="-10 1.7 3" rotation="0, 80, 0" look-controls="reverseMouseDrag: true"> 
@@ -152,7 +161,6 @@
 - fonts 
 - third clue
 -shadow animate out of the door in like three seconds
-- crosshair cursor instead of a ring?
 - integrate more animations.. 
 -click-sound when clicking on the codeboxes
 
