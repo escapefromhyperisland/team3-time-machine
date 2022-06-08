@@ -37,7 +37,7 @@ button {
   cursor: pointer;
 }
 
-#popup, #popup-info {
+#popup, #popup-info, #finish {
   position: fixed;
   z-index: 3;
   top: 50%;
@@ -52,8 +52,10 @@ button {
   border: 5px var(--light) solid;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   font-family: var(--intro-font);
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden{
@@ -67,7 +69,7 @@ button {
   background: black;
   z-index: 2;
 }
-#timetravel{
+#timetravel, #wrapper-finish{
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -108,6 +110,8 @@ button {
   height: 3rem;
   border-radius: 4px;
   visibility: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 #music-button {
