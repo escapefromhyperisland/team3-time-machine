@@ -15,7 +15,7 @@
 
   <body>
     <script src="index.js"></script>
-    <!-- <div id="popup">
+    <div id="popup">
       <p>
         “Oh…….. what is this on my head….… I feel dizzy………. a BUMP!?!…….. what happened…… Oh wait….WAIT…. my time-machine!!…..I think somebody used it?!?!?…. ##€%!?&!…… damn, I knew I did too good on the user-interface!!… MY GOSH!! The WORLD is in danger!! If this person leaves anything behind, the time-line will break and the world explodes!!!!!!”
       </p>
@@ -39,21 +39,32 @@
     <div id="popup-info" class="hidden">
       <h3>Instructions:</h3>
       <p>You have to be as fast as possible to chase this person using the time travel machine! Hurry to get to the person!</p>
-      <p>Use the cursor (yellow circle) to click</p>
+      <p>Use the mouse to click and the arrows on your keyboard to move around</p>
       <br>
       <h3>Read more if you need a hint:</h3>
-      <p>Seems like you cant get out of this room....use the cursor (yellow circle) to click and get the passwords for the codeboxes.</p>
-    </div> -->
+      <p>Seems like you cant get out of this room....and your Teleporter is not working here.......find the clues for the passwords for the codeboxes to come out of this workshop.</p>
+    </div>
 
-    <a-scene id="scene" shadow="type: pcfsoft">
+    <div id="wrapper-finish" class="hidden">
+      <div id="finish">
+        <h1>You cracked the code from the Steampunk room YEAH!!</h1>
+        <p>....but you did not catch the person in this time. DAMN! </p>
+        <p>Hope you are not too late!.... </p>
+        <p>...Next chance in the next time..</p>
+        <br/>
+        <button id="next-level-button" onclick="nextLevel()">.......HURRY!!!!!!!!!!</button>
+      </div>
+    </div>
+
+    <a-scene id="scene" shadow="type: pcfsoft" vr-mode-ui="false" cursor="rayOrigin: mouse">
 
       <a-assets>
         <a-asset-item id="fox" src="./assets/fox/scene.gltf"></a-asset-item>
         <a-asset-item id="seahorse" src="./assets/seahorse/scene.gltf"></a-asset-item>
         <a-asset-item id="heartglass" src="./assets/heartglass/scene.gltf"></a-asset-item>
-        <a-asset-item id="lunarglobe" src="./assets/lunarglobe/scene.gltf"></a-asset-item>
+        <!-- <a-asset-item id="lunarglobe" src="./assets/lunarglobe/scene.gltf"></a-asset-item> -->
         <img id="ground-cobble" src="./assets/ground.jpg" /> <!--https://cdn.aframe.io/a-painter/images/floor.jpg -->
-        <!-- <audio src="./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3" autoplay preload></audio> -->
+        <audio id="getout" src="./assets/500616__vanishedillusion__get-out.wav" preload="auto"></audio>
         <img id="wall1" src="./assets/steampunkwall1.jpeg" />
         <img id="wall2" src="./assets/steampunkwall2.jpeg" />
         <img id="clue1" src="./assets/clue1.png" />
@@ -71,10 +82,12 @@
       <a-box id="ceiling" position="0 10 0" depth="0.1" rotation="-90 0 0" width="30" height="20" color="#000000"></a-box>
       <a-circle src="#door" width="10" position="-14.9 1.4 -7.2" radius="0.7" rotation="0 -270 0"></a-circle>
 
-      <a-box src="#clue1" position="-1 0.5 -3" rotation="0 45 0"  animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
-      <a-sphere position="-1 1.35 -3" radius="1.35" color="#000000" scale-down-on-mouseclick></a-sphere>
-      <a-cylinder position="-6 0.75 -3" radius="1.1" height="0.1" color="#FFFFFF"></a-cylinder>
-      <a-sphere src="#clue2" 
+      <a-box class="clickable" src="#clue1" position="-1 0.5 -3" rotation="0 45 0"  animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true" shadow></a-box>
+      <a-sphere position="-1 1.35 -3" radius="1.35" color="#000000" scale-down-on-mouseclick shadow></a-sphere>
+      <a-cylinder position="-6 0.75 -3" radius="1.1" height="0.1" color="#FFFFFF" shadow></a-cylinder>
+      <a-sphere
+        class="clickable"
+        src="#clue2" 
         position="-10 .1 -6" 
         radius="0.1" 
         animation="property: object3D.position.z; to: -9.8; dir: alternate; dur: 3000; loop: true" 
@@ -82,17 +95,8 @@
         scale-up-on-mouseclick 
       ></a-sphere>
 
-      <!-- <a-text
-      src="#codebox"
-      text="value: Codebox; align: center; anchor: align; baseline: center;"
-      position="0 1.35 -3"
-      rotation="0 0 0"
-      geometry="primitive:plane; width: 0.2; heigth: 0.5"
-      repeat="0 0"
-      >
-    </a-text> -->
-
       <a-text
+        class="clickable"
         change-text-on-mouseclick
         text="value: CODEBOX; align: center; anchor: align; baseline: center;"
         position="-14.9 1.9 -5.9"
@@ -102,6 +106,7 @@
         material="src:#codebox">
       </a-text>
       <a-text
+        class="clickable"
         change-text1-on-mouseclick
         text="value: CODEBOX; align: center; anchor: align; baseline: center;"
         position="-14.9 1.6 -5.9"
@@ -111,6 +116,7 @@
         material="src:#codebox">
       </a-text>
       <a-text
+        class="clickable"
         change-text2-on-mouseclick
         text="value: CODEBOX; align: center; anchor: align; baseline: center;"
         position="-14.9 1.3 -5.9"
@@ -120,16 +126,19 @@
         material="src:#codebox">
       </a-text>
 
-      <a-entity gltf-model="#fox" text-visible-on-hover animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0">
-        <a-sphere visible="false" position="0 1.1 -0.4" radius="0.6" height="0.5" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text__foo="color: #892424; lineHeight: 70; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever ; width: 0.5">
+      <a-entity gltf-model="#fox" class="clickable" text-visible-on-hover animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0" shadow>
+        <a-sphere visible="false" position="0 1.1 -0.4" radius="0.6" height="0.5" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text__foo="color: #892424; lineHeight: 70; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever........ ; width: 0.5; align: center; anchor: align; baseline: center;">
         </a-sphere>
       </a-entity>
-      <a-entity gltf-model="#lunarglobe" position="6 0 -3" scale="0.05, 0.1, 0.05" rotation="0, -80, 0"></a-entity>
-      <a-entity gltf-model="#seahorse"  animation-mixer="clip: *;" position="10.36113 2.12966 -3.97828" scale="0.3 0.3 0.3" rotation="0 140 0"></a-entity>
-      <a-entity gltf-model="#heartglass"  animation-mixer="clip: *;" position="-9 0 7"scale="0.4, 0.4, 0.4" rotation="0, 0, 0"></a-entity>
+      <!-- <a-entity gltf-model="#lunarglobe" position="6 0 -3" scale="0.05, 0.1, 0.05" rotation="0, -80, 0" shadow></a-entity> -->
+      <a-entity gltf-model="#seahorse" class="clickable" animation-mixer="clip: *;" position="10.36113 2.12966 -3.97828" scale="0.3 0.3 0.3" rotation="0 140 0" sound="src: #getout; on: click" shadow></a-entity>
+      <a-entity gltf-model="#heartglass"  animation-mixer="clip: *;" position="-9 0 7"scale="0.4, 0.4, 0.4" rotation="0, 0, 0" shadow></a-entity>
+
 
       <a-camera position="-10 1.7 3" rotation="0, 80, 0" look-controls="reverseMouseDrag: true"> 
-        <a-cursor color="#FFFF00"></a-cursor>
+        <!-- WHERE TO PLACE THIS A-ENTITY?? AND WHY IS THERE STILL THE WARNING AND WHY WAS IT ALWAYS TWO CLICKES OR EVEN HOVER?!?! -->
+        <!-- <a-entity cursor raycaster="far: 20; interval: 100; objects: .clickable"></a-entity> -->
+        <!-- <a-cursor color="#FFFF00"></a-cursor> -->
       </a-camera>
 
     </a-scene>
@@ -140,10 +149,9 @@
   animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
   animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave" 
   
-  
+- fonts 
+- third clue
 -shadow animate out of the door in like three seconds
-- not hardcode the codeword with setattribute in the clickfunction
--third clue
 - crosshair cursor instead of a ring?
 - integrate more animations.. 
 -click-sound when clicking on the codeboxes

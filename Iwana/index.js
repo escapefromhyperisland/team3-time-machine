@@ -1,191 +1,6 @@
-AFRAME.registerComponent("scale-down-on-mouseclick", {
-  schema: {
-    to: {default: "0.5 0.5 0.5", type: "vec3"}
-  },
-
-  init: function () {
-    var data = this.data;
-    var el = this.el;
-    this.el.addEventListener("click", function () {
-      el.object3D.scale.copy(data.to);
-    });
-  }
-});
-
-AFRAME.registerComponent("scale-up-on-mouseclick", {
-  schema: {
-    to: {default: "3 3 3", type: "vec3"},
-    radius: {type: "int", default: 4},
-    positiony: {default: .3, type: "number"}
-  },
-
-  init: function () {
-    var data = this.data;
-    var el = this.el;
-    this.el.addEventListener("click", function () {
-      el.object3D.scale.copy(data.to);
-      el.object3D.position.y = data.positiony;
-      // el.object3D.radius.set(data.radius);
-    // here should the y-position been updatet to more than 0.16 (perhaps 0.55) 
-    // perhaps with mouseenter, -leave?
-    // and make the rotation -180 and the animation stop
-    // take away the changes when leaving??
-    });
-  }
-});
-
-
-AFRAME.registerComponent("change-text-on-mouseclick", {
-  // schema: {
-  //   value: {default: "TECHNOLOGY, ART, PHILOSOPHY, GEOGRAPHY, PLAYFULNESS, WITCHERY", type: "array"},
-  // },
-
-    update: function () {
-      const password = ["ART", "TECHNOLOGY", "PHILOSOPHY", "GEOGRAPHY", "PLAYFULNESS", "WITCHERY"]
-      var data = this.data;
-      console.log("DATA: ", data)
-      var el = this.el;
-
-
-      el.addEventListener('click', function (event) {
-
-        // const newWord = password.findIndex(el.getAttribute('text').value) === -1 ? password[0] : password.findIndex(el.getAttribute('text').value) >= password.length + 1 ? password 
-        if (el.getAttribute('text').value === "CODEBOX") {
-          el.setAttribute("value", password[0])
-        } else if (el.getAttribute('text').value === "ART") {
-          el.setAttribute("value", password[1])
-        } else if (el.getAttribute('text').value === "TECHNOLOGY") {
-          el.setAttribute("value", password[2])
-        } else if (el.getAttribute('text').value === "PHILOSOPHY") {
-          el.setAttribute("value", password[3])
-        } else if (el.getAttribute('text').value === "GEOGRAPHY") {
-          el.setAttribute("value", password[4])
-        } else if (el.getAttribute('text').value === "PLAYFULNESS") {
-          el.setAttribute("value", password[5])
-        } else if (el.getAttribute('text').value === "WITCHERY") {
-          el.setAttribute("value", password[0])
-        } 
-          // this.flushToDOM()
-      })
-  }
-
-});
-
-AFRAME.registerComponent("change-text1-on-mouseclick", {
-  // schema: {
-  //   value: {default: "TECHNOLOGY, ART, PHILOSOPHY, GEOGRAPHY, PLAYFULNESS, WITCHERY", type: "array"},
-  // },
-
-    update: function () {
-      const password = ["IS", "CAN", "DOES", "SAYS", "MEANS", "LETS"]
-      var data = this.data;
-      console.log("DATA: ", data)
-      var el = this.el;
-
-
-      el.addEventListener('click', function (event) {
-
-        // const newWord = password.findIndex(el.getAttribute('text').value) === -1 ? password[0] : password.findIndex(el.getAttribute('text').value) >= password.length + 1 ? password 
-        if (el.getAttribute('text').value === "CODEBOX") {
-          el.setAttribute("value", password[0])
-        } else if (el.getAttribute('text').value === "IS") {
-          el.setAttribute("value", password[1])
-        } else if (el.getAttribute('text').value === "CAN") {
-          el.setAttribute("value", password[2])
-        } else if (el.getAttribute('text').value === "DOES") {
-          el.setAttribute("value", password[3])
-        } else if (el.getAttribute('text').value === "SAYS") {
-          el.setAttribute("value", password[4])
-        } else if (el.getAttribute('text').value === "MEANS") {
-          el.setAttribute("value", password[5])
-        } else if (el.getAttribute('text').value === "LETS") {
-          el.setAttribute("value", password[0])
-        } 
-          // this.flushToDOM()
-      })
-  }
-
-});
-
-AFRAME.registerComponent("change-text2-on-mouseclick", {
-  // schema: {
-  //   value: {default: "TECHNOLOGY, ART, PHILOSOPHY, GEOGRAPHY, PLAYFULNESS, WITCHERY", type: "array"},
-  // },
-
-    update: function () {
-      const password = ["NOTHING", "MOONSHINE", "SOMETHING", "THE WORLD", "EVERYTHING", "SUNSHINE"]
-      var data = this.data;
-      console.log("DATA: ", data)
-      var el = this.el;
-
-
-      el.addEventListener('click', function (event) {
-
-        // const newWord = password.findIndex(el.getAttribute('text').value) === -1 ? password[0] : password.findIndex(el.getAttribute('text').value) >= password.length + 1 ? password 
-        if (el.getAttribute('text').value === "CODEBOX") {
-          el.setAttribute("value", password[0])
-        } else if (el.getAttribute('text').value === "NOTHING") {
-          el.setAttribute("value", password[1])
-        } else if (el.getAttribute('text').value === "MOONSHINE") {
-          el.setAttribute("value", password[2])
-        } else if (el.getAttribute('text').value === "SOMETHING") {
-          el.setAttribute("value", password[3])
-        } else if (el.getAttribute('text').value === "THE WORLD") {
-          el.setAttribute("value", password[4])
-        } else if (el.getAttribute('text').value === "EVERYTHING") {
-          el.setAttribute("value", password[5])
-        } else if (el.getAttribute('text').value === "SUNSHINE") {
-          el.setAttribute("value", password[0])
-        } 
-          // this.flushToDOM()
-      })
-  }
-
-});
-
-AFRAME.registerComponent("text-visible-on-hover", {
-  schema: {
-    visible: {default: "true"}
-  },
-
-  init: function () {
-    var data = this.data;
-    var el = this.el;
-    console.log("Object3D: ", el.object3D.children[0].visible) 
-    // var defaultVisibility = el.getAttribute('visible').value;
-    const defaultVisibility = el.object3D.children[0].visible
-    el.addEventListener('mouseenter', function () {
-      // el.setAttribute('visible', data.visible);
-      el.object3D.children[0].visible = data.visible
-    });
-
-    el.addEventListener('mouseleave', function () {
-      el.object3D.children[0].visible = defaultVisibility;
-    });
-  }
-});
-
-// AFRAME.registerComponent("mouse-enter-text-visible", {
-//   schema: {
-//     to: {default: "true", type: "string"},
-//   },
-
-//   init: function () {
-//     var data = this.data;
-//     var el = this.el;
-//     this.el.addEventListener("mouseenter", function () {
-//       el.object3D.scale.copy(data.to);
-//       el.object3D.position.y = data.positiony;
-//       // el.object3D.radius.set(data.radius);
-//     // here should the y-position been updatet to more than 0.16 (perhaps 0.55) 
-//     // perhaps with mouseenter, -leave?
-//     // and make the rotation -180 and the animation stop
-//     // take away the changes when leaving??
-//     });
-//   }
-// });
-
 const background = new Audio("./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3")
+const solutionMusic = new Audio("./assets/215983__bushi3593__creaking-of-door-from-outside.wav")
+solutionMusic.volume = 0.3;
 background.volume = 0.2;
 background.loop = true;
 let musicIsPlaying = true;
@@ -214,3 +29,138 @@ function closePopup() {
 function togglePopup() {
   document.querySelector("#popup-info").classList.toggle("hidden");
 }
+
+const nextLevel = () => {
+  window.parent.postMessage('nextLevel');
+}
+
+const solutionIsCorrect = [false, false, false]
+
+const changePassword = (password, el) => {
+  let newPassword = "";
+  let indexNow = password.findIndex((x)=>(x === el.getAttribute('text').value ));
+  console.log("INDEXNOW FIRST: ", indexNow)
+  if (indexNow === -1 || indexNow === (password.length -1)){
+    newPassword = password[0]
+    console.log("NEW PASSWORD 0", newPassword )
+  }else {
+    newPassword = password[indexNow+1]
+    console.log("INDEXNOW +1", indexNow+1)
+    console.log("NEW PASSWORD", newPassword )
+  }
+  el.setAttribute("value", newPassword)
+  changeSolution(password, newPassword)
+}
+
+const changeSolution = (password, newPassword) => {
+  if(password[0] === "ART"){
+    newPassword === "TECHNOLOGY" ? solutionIsCorrect[0] = true : solutionIsCorrect[0] = false
+    console.log("SOLUTION CORRECT OR NOT: ",solutionIsCorrect[0])
+  } else if(password[0] === "IS"){
+    newPassword === "MEANS" ? solutionIsCorrect[1] = true : solutionIsCorrect[1] = false
+  } else{
+    newPassword === "EVERYTHING" ? solutionIsCorrect[2] = true : solutionIsCorrect[2] = false
+  }
+  setTimeout(()=>{
+    checkSolution()
+  }, 3000)
+}
+let interval = 0;
+
+const checkSolution = () => {
+  if(solutionIsCorrect[0] && solutionIsCorrect[1] && solutionIsCorrect[2]){
+    interval = setInterval(fade, 2200);
+    solutionMusic.play()
+    document.querySelector("#wrapper-finish").classList.remove("hidden");
+    document.querySelector("#finish").classList.add("scaleup");
+  }
+}
+
+function fade() {
+  background.volume = background.volume - 0.05;
+  if(background.volume <= 0){
+      clearInterval(interval);
+      background.pause();
+      background.volume = .2;
+  }
+}
+
+AFRAME.registerComponent("change-text-on-mouseclick", {
+
+    update: function () {
+      const password = ["ART", "TECHNOLOGY", "PHILOSOPHY", "GEOGRAPHY", "PLAYFULNESS", "WITCHERY"]
+      var el = this.el;
+      el.addEventListener('click', function (){changePassword(password, el)})
+  }
+});
+
+AFRAME.registerComponent("change-text1-on-mouseclick", {
+
+    update: function () {
+      const password = ["IS", "CAN", "DOES", "SAYS", "MEANS", "LETS"]
+      var el = this.el;
+      el.addEventListener('click', function (){changePassword(password, el)})
+  }
+});
+
+AFRAME.registerComponent("change-text2-on-mouseclick", {
+
+    update: function () {
+      const password = ["NOTHING", "MOONSHINE", "SOMETHING", "THE WORLD", "EVERYTHING", "SUNSHINE"]
+      let el = this.el;
+      el.addEventListener('click', function (){changePassword(password, el)})
+  }
+});
+
+AFRAME.registerComponent("text-visible-on-hover", {
+  schema: {
+    visible: {default: "true"}
+  },
+
+  init: function () {
+    let data = this.data;
+    let el = this.el;
+    const defaultVisibility = el.object3D.children[0].visible
+
+    el.addEventListener('mouseenter', function () {
+      el.object3D.children[0].visible = data.visible
+    });
+
+    el.addEventListener('mouseleave', function () {
+      el.object3D.children[0].visible = defaultVisibility;
+    });
+  }
+});
+
+AFRAME.registerComponent("scale-down-on-mouseclick", {
+  schema: {
+    to: {default: "0.5 0.5 0.5", type: "vec3"}
+  },
+
+  init: function () {
+    var data = this.data;
+    var el = this.el;
+    this.el.addEventListener("click", function () {
+      el.object3D.scale.copy(data.to);
+    });
+  }
+});
+
+AFRAME.registerComponent("scale-up-on-mouseclick", {
+  schema: {
+    to: {default: "3 3 3", type: "vec3"},
+    radius: {type: "int", default: 4},
+    positiony: {default: .3, type: "number"}
+  },
+
+  init: function () {
+    var data = this.data;
+    var el = this.el;
+    this.el.addEventListener("click", function () {
+      el.object3D.scale.copy(data.to);
+      el.object3D.position.y = data.positiony;
+     // perhaps with mouseenter, -leave?
+    // take away the changes when leaving??
+    });
+  }
+});
