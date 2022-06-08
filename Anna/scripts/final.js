@@ -46,6 +46,7 @@ setTimeout(function () {
 }, 15000);
 
 setTimeout(function () {
+  webcam.stop();
   msgBox.innerHTML = "";
   document.getElementById("final-body-id").classList.remove("final-body");
   document.getElementById("final-body-id").classList.add("final-final-body");
