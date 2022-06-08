@@ -65,21 +65,25 @@ const changeSolution = (password, newPassword) => {
     checkSolution()
   }, 3000)
 }
+let interval = 0;
 
 const checkSolution = () => {
   if(solutionIsCorrect[0] && solutionIsCorrect[1] && solutionIsCorrect[2]){
-    background.pause()
+    interval = setInterval(fade, 2200);
     solutionMusic.play()
-    // setTimeout(()=>{
-    //   solutionMusic.pause()
-    // }, 5000)
     document.querySelector("#wrapper-finish").classList.remove("hidden");
     document.querySelector("#finish").classList.add("scaleup");
-    // document.querySelector("#finish").style.visibility = "visible";
   }
 }
 
-
+function fade() {
+  background.volume = background.volume - 0.05;
+  if(background.volume <= 0){
+      clearInterval(interval);
+      background.pause();
+      background.volume = .2;
+  }
+}
 
 AFRAME.registerComponent("change-text-on-mouseclick", {
 

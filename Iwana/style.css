@@ -57,6 +57,9 @@ button {
   justify-content: center;
   align-items: center;
 }
+#popup-info{
+  font-family: var(--main-font);
+}
 
 #finish {
   position: fixed;
