@@ -8,8 +8,8 @@ const secondChallengeInit = () => {
         <button id="guess_letter_btn" class='enter-button' pys-onClick="on_click_letter">入力</button>
       </div>
       <div id="unknown-letters"></div>
-      <p id='hint'></p>
-      <div id='key'></div>
+      <p id='hint' Cherry-blossom='1' Chrysanthemum='2' Paeonia-suffruticosa='3' Camellia='4' Paeonia_suffruticosa='5' Plum_blossom='6'></p>
+      <div id='key' sakura='1' kiku='2' botan='3' tsubaki='4' fuji='5' ume='6'></div>
       <py-script src="../python/second_challenge.py"></py-script>
     `;
 
