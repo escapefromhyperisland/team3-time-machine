@@ -88,7 +88,7 @@ button {
  z-index: 0;
 }
 
-#popup button {
+#popup button, #next-level-button {
   padding: 1rem;
   border: 5px var(--light) solid;
   font-family: var(--main-font);

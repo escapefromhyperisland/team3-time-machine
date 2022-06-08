@@ -1,4 +1,6 @@
 const background = new Audio("./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3")
+const solutionMusic = new Audio()
+solutionMusic.volume = 0.2;
 background.volume = 0.2;
 background.loop = true;
 let musicIsPlaying = true;
@@ -26,6 +28,10 @@ function closePopup() {
 
 function togglePopup() {
   document.querySelector("#popup-info").classList.toggle("hidden");
+}
+
+const nextLevel = () => {
+  window.parent.postMessage('nextLevel');
 }
 
 const solutionIsCorrect = [false, false, false]
@@ -57,17 +63,18 @@ const changeSolution = (password, newPassword) => {
   }
   setTimeout(()=>{
     checkSolution()
-  }, 1000)
+  }, 2000)
 }
 
 const checkSolution = () => {
   if(solutionIsCorrect[0] && solutionIsCorrect[1] && solutionIsCorrect[2]){
-    console.log()
-    window.parent.postMessage('nextLevel');
+    background.pause()
     document.querySelector("#wrapper-finish").classList.remove("hidden");
     // document.querySelector("#finish").style.visibility = "visible";
   }
 }
+
+
 
 AFRAME.registerComponent("change-text-on-mouseclick", {
 
