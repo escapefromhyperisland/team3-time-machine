@@ -1,4 +1,3 @@
-
 //svg mazes
 const levelTwo = document.querySelector(".level-two");
 //UI MESSAGES
@@ -9,7 +8,7 @@ const spookyPicture = document.getElementById("spooky-picture");
 // const screamSound = document.querySelector(".scream-sound");
 
 const collisionCheck = (value) => {
-  // if (value === "maze-border") alert("You lost...try again.");
+  if (value === "maze-border") alert("You lost...try again.");
   if (value === "finish") {
     nextButton.style.opacity = 1;
     nextButton.style.pointerEvents = "all";
@@ -23,7 +22,7 @@ const collisionCheck = (value) => {
   }
 };
 
-window.addEventListener('mousemove', (e) => {
+window.addEventListener("mousemove", (e) => {
   let check = e.target.classList.value;
   //console.log(e.target.classList.value);
   collisionCheck(check);
