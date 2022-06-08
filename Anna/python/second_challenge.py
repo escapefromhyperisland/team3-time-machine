@@ -35,7 +35,7 @@ def on_click_letter(*args, **kwargs):
     if correct == chosen_word:
         print('you did it')
         pyscript.write('hint', "")
-        pyscript.write('key', f"<div class='modal-hana'><div class='modal-content'><div style='font-size: 10rem'>{kanji[words.index(chosen_word)]}</div><div>You did it! Click <strong style='color: orange'>HERE!</strong></div></div></div>")
+        pyscript.write('key', f"<div class='modal-hana'><div class='modal-content'><div style='font-size: 10rem; font-family: 'Yuji Mai', serif;'>{kanji[words.index(chosen_word)]}</div><div>You did it! Click <strong style='color: orange'>HERE!</strong></div></div></div>")
 
 
     
