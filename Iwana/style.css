@@ -37,7 +37,7 @@ button {
   cursor: pointer;
 }
 
-#popup, #popup-info, #finish {
+#popup, #popup-info {
   position: fixed;
   z-index: 3;
   top: 50%;
@@ -56,6 +56,32 @@ button {
   font-family: var(--intro-font);
   justify-content: center;
   align-items: center;
+}
+
+#finish {
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 6s ease-in-out;
+  background: var(--dark-opacity);
+  color: var(--white);
+  max-width: 40rem;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  padding: 3rem;
+  border: 5px var(--light) solid;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  font-family: var(--intro-font);
+  justify-content: center;
+  align-items: center;
+}
+
+#finish.scaleup{
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .hidden{

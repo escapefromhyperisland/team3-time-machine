@@ -1,6 +1,6 @@
 const background = new Audio("./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3")
-const solutionMusic = new Audio()
-solutionMusic.volume = 0.2;
+const solutionMusic = new Audio("./assets/215983__bushi3593__creaking-of-door-from-outside.wav")
+solutionMusic.volume = 0.3;
 background.volume = 0.2;
 background.loop = true;
 let musicIsPlaying = true;
@@ -63,13 +63,18 @@ const changeSolution = (password, newPassword) => {
   }
   setTimeout(()=>{
     checkSolution()
-  }, 2000)
+  }, 3000)
 }
 
 const checkSolution = () => {
   if(solutionIsCorrect[0] && solutionIsCorrect[1] && solutionIsCorrect[2]){
     background.pause()
+    solutionMusic.play()
+    // setTimeout(()=>{
+    //   solutionMusic.pause()
+    // }, 5000)
     document.querySelector("#wrapper-finish").classList.remove("hidden");
+    document.querySelector("#finish").classList.add("scaleup");
     // document.querySelector("#finish").style.visibility = "visible";
   }
 }
