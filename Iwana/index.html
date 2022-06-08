@@ -39,7 +39,7 @@
     <div id="popup-info" class="hidden">
       <h3>Instructions:</h3>
       <p>You have to be as fast as possible to chase this person using the time travel machine! Hurry to get to the person!</p>
-      <p>Use the cursor (yellow circle) to click</p>
+      <p>Use the mouse to click and the arrows on your keyboard to move around</p>
       <br>
       <h3>Read more if you need a hint:</h3>
       <p>Seems like you cant get out of this room....and your Teleporter is not working here.......find the clues for the passwords for the codeboxes to come out of this workshop.</p>
@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <a-scene id="scene" shadow="type: pcfsoft" vr-mode-ui="false">
+    <a-scene id="scene" shadow="type: pcfsoft" vr-mode-ui="false" cursor="rayOrigin: mouse">
 
       <a-assets>
         <a-asset-item id="fox" src="./assets/fox/scene.gltf"></a-asset-item>
@@ -138,7 +138,7 @@
       <a-camera position="-10 1.7 3" rotation="0, 80, 0" look-controls="reverseMouseDrag: true"> 
         <!-- WHERE TO PLACE THIS A-ENTITY?? AND WHY IS THERE STILL THE WARNING AND WHY WAS IT ALWAYS TWO CLICKES OR EVEN HOVER?!?! -->
         <!-- <a-entity cursor raycaster="far: 20; interval: 100; objects: .clickable"></a-entity> -->
-        <a-cursor color="#FFFF00"></a-cursor>
+        <!-- <a-cursor color="#FFFF00"></a-cursor> -->
       </a-camera>
 
     </a-scene>
