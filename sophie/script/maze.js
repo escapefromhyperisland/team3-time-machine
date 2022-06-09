@@ -4,7 +4,7 @@ const levelTwo = document.querySelector(".level-two");
 const uiLevel = document.querySelector(".ui-level");
 const uiMessage = document.querySelector(".ui-message");
 //End Game
-const spookyPicture = document.getElementById("spooky-picture");
+// const spookyPicture = document.getElementById("spooky-picture");
 // const screamSound = document.querySelector(".scream-sound");
 
 const collisionCheck = (value) => {
@@ -15,9 +15,12 @@ const collisionCheck = (value) => {
     levelOne.style.pointerEvents = "none";
   }
   if (value === "end-game") {
+    //alert("this is working");
+    window.parent.postMessage('nextLevel');
     // screamSound.play();
-    spookyPicture.play();
-    spookyPicture.style.display = "block";
+
+    // spookyPicture.play();
+    // spookyPicture.style.display = "block";
     // document.body.style.background = "black";
   }
 };
