@@ -1,0 +1,11 @@
+Model Information:
+* title:	Nature's Last Gift
+* source:	https://sketchfab.com/3d-models/natures-last-gift-4f8f7128799f417dbbc28af0f0fc7699
+* author:	WillBrapLane (https://sketchfab.com/Will_Lane)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Nature's Last Gift" (https://sketchfab.com/3d-models/natures-last-gift-4f8f7128799f417dbbc28af0f0fc7699) by WillBrapLane (https://sketchfab.com/Will_Lane) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

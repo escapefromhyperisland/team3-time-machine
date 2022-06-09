@@ -1,0 +1,11 @@
+Model Information:
+* title:	Steambot Fly Lod0
+* source:	https://sketchfab.com/3d-models/steambot-fly-lod0-b3865d2709af41c588a96ea1e113037a
+* author:	Vziuh (https://sketchfab.com/Vziuh)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Steambot Fly Lod0" (https://sketchfab.com/3d-models/steambot-fly-lod0-b3865d2709af41c588a96ea1e113037a) by Vziuh (https://sketchfab.com/Vziuh) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
