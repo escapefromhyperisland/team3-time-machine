@@ -49,7 +49,7 @@ const selectOption = (option) => {
       (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 130);
     })();
     setTimeout(function () {
-      location.href = "pages/maze.html";
+      location.href = "maze.html";
     }, 2000);
     //loadScript("maze.js"); //CODE BELOW LOADsCRIPT WON'T BE LOADED
   }

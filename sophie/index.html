@@ -4,20 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
-    <title>Adventure Time</title>
+    <link rel="stylesheet" href="style/intro.css" />
+    <title>Videooooo</title>
   </head>
   <body>
-    <div id="container">
-      <div id="text">Text</div>
-      <div id="option-buttons" class="btn-grid">
-        <button class="btn">Option 1</button>
-        <button class="btn">Option 2</button>
-        <button class="btn">Option 3</button>
-        <button class="btn">Option 4</button>
-      </div>
-    </div>
-    <script src="script/script.js"></script>
-    <!-- <script src="script/maze.js"></script> -->
+    <video src="sounds_videos/time_travel_1.mp4" id="spooky-picture"></video>
+    <script>
+      const spookyPicture = document.getElementById("spooky-picture");
+      spookyPicture.play();
+      spookyPicture.style.display = "block";
+      setTimeout(function () {
+        location.href = "pages/textVenture.html";
+      }, 11000);
+    </script>
   </body>
 </html>
