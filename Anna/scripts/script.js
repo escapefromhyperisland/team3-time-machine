@@ -7,7 +7,7 @@ const firstChallengeInit = () => {
   setTimeout(function () {
     document.getElementById("intro-video").innerHTML = `
     <video
-    id="timetravel-video"
+ 
     class="bg-video"
     src="assets/Mugen-jo.mp4"
     autoplay
