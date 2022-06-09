@@ -5,8 +5,18 @@ const introVideo = document.getElementById("warp-overlay");
 
 const firstChallengeInit = () => {
   setTimeout(function () {
+    document.getElementById("intro-video").innerHTML = `
+    <video
+    id="timetravel-video"
+    class="bg-video"
+    src="assets/Mugen-jo.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+  ></video>
+    `;
     document.getElementById("warp-overlay").remove();
-    document.getElementById("timetravel-video").remove();
   }, 6000);
   container.innerHTML += `
         <img src='./assets/makimono01.png' alt="challenge 1 instruction"/>
