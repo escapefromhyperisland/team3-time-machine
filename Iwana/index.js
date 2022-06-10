@@ -18,8 +18,10 @@ function closePopup() {
   document.querySelector("#travel-video").play()
   document.querySelector("#background-black").style.visibility = "hidden";
 
+  // SOLUTION MUSIC ONLY PLAYING IF SHADOW DISAPEARS AND NOT INTERFERING WIth backGROUND musiC
   setTimeout(()=>{
     background.play()
+    solutionMusic.play()
     document.querySelector("#timetravel").style.visibility = "hidden";
     document.querySelector("#music-button").style.visibility = "visible";
     document.querySelector("#info-button").style.visibility = "visible";
@@ -161,25 +163,21 @@ AFRAME.registerComponent("scale-up-on-mouseclick", {
 });
 
 
-// TO DO AND FIGURE OUT HOW TO ACCESS THE OPACITY (otherwise make the same as on hover above with visible?)
-AFRAME.registerComponent("text-opacity-up-on-hover", {
-  schema: {
-    opacity: {default: 1, type: "int"}
-  },
 
+AFRAME.registerComponent("text-opacity-up-on-hover", {
+  
   init: function () {
     let data = this.data;
     let el = this.el;
-    const defaultOpacity = el.getAttribute("text")
+    const defaultOpacity = el
   
     
     console.log("DEFAULT OPACITY: ", defaultOpacity)
-  //   el.addEventListener('mouseenter', function () {
-  //     el.object3D.children[0].visible = data.visible
-  //   });
-
-  //   el.addEventListener('mouseleave', function () {
-  //     el.object3D.children[0].visible = defaultVisibility;
-  //   });
+    el.addEventListener('mouseenter', function () {
+      el.setAttribute("text", {value: "You need the sung and unwritten word to answer this question: What can be (the word)?", align: "center", anchor: "align", baseline: "bottom", width: 2})
+    });
+    el.addEventListener('mouseleave', function () {
+      el.removeAttribute("text")
+    });
   }
 });

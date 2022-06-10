@@ -65,7 +65,7 @@
         <a-asset-item id="fox" src="./assets/fox/scene.gltf"></a-asset-item>
         <a-asset-item id="seahorse" src="./assets/seahorse/scene.gltf"></a-asset-item>
         <a-asset-item id="heartglass" src="./assets/heartglass/scene.gltf"></a-asset-item>
-        <a-asset-item id="shadwo" src="./assets/shadow/scene.gltf"></a-asset-item>
+        <a-asset-item id="shadow" src="./assets/shadow/scene.gltf"></a-asset-item>
         <img id="ground-cobble" src="./assets/ground.jpg" /> <!--https://cdn.aframe.io/a-painter/images/floor.jpg -->
         <audio id="getout" src="./assets/500616__vanishedillusion__get-out.wav" preload="auto"></audio>
         <audio id="poison" src="./assets/517917__womb-affliction__female-singing-poison-in-harmony.flac" preload="auto"></audio>
@@ -98,7 +98,7 @@
         scale-up-on-mouseclick 
       ></a-sphere>
       <a-circle src="#clue3" position="11.03481 1.92923 -9.90231" radius="0.7" depth="0.1" rotation="0 360 0" width="10"></a-circle>
-      <a-cylinder text-opacity-up-on-hover position="6.84351 0 -8.46528" radius="1.1" height="0.1" color="#FFFFFF" text="value: You need the sung and unwritten word to answer this question: What can be (the word)?; align: center; anchor: align; baseline: bottom; width: 2; opacity: 0.1;" material="depthWrite: false; opacity: 0.4; side: double; blending: normal; emissive: #000000; metalness: 0.7" shadow></a-cylinder>
+      <a-cylinder text-opacity-up-on-hover position="6.84351 0 -8.46528" radius="1.1" height="0.1" color="#FFFFFF" material="depthWrite: false; opacity: 0.4; side: double; blending: normal; emissive: #000000; metalness: 0.7" shadow></a-cylinder>
       
       <a-text
         change-text-on-mouseclick
@@ -129,7 +129,6 @@
       </a-text>
 
     
-
       <a-entity gltf-model="#fox" text-visible-on-hover animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0" shadow>
         <a-sphere visible="false" position="0 1.1 -0.4" radius="0.6" height="0.5" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text__foo="color: #892424; lineHeight: 70; side: double; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever........ ; width: 0.5; align: center; anchor: align; baseline: center;">
         </a-sphere>
