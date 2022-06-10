@@ -28,7 +28,7 @@
 
     <div id="timetravel">
       <video id="travel-video">
-        <source src="./assets/time_travel_1.mp4" type="video/mp4"> 
+        <source src="../Assets/time_travel_1.mp4" type="video/mp4"> 
       </video>
     </div>
       
@@ -56,8 +56,8 @@
       </div>
     </div> -->
 
-    <a-scene id="scene" shadow="type: pcfsoft" vr-mode-ui="false" cursor="rayOrigin: mouse">
-
+    <a-scene fog="type: linear; color: #666666; near: 0; far: 20" id="scene" shadow="type: pcfsoft" vr-mode-ui="false" cursor="rayOrigin: mouse">
+ <!-- #333366 #666666 #FFFFCC -->
       <a-assets>
         <a-asset-item id="airshipfish" src="./assets/airshipfish/scene.gltf"></a-asset-item>
         <a-asset-item id="plantinbox" src="./assets/plantinbox/scene.gltf"></a-asset-item>
@@ -65,6 +65,7 @@
         <a-asset-item id="fox" src="./assets/fox/scene.gltf"></a-asset-item>
         <a-asset-item id="seahorse" src="./assets/seahorse/scene.gltf"></a-asset-item>
         <a-asset-item id="heartglass" src="./assets/heartglass/scene.gltf"></a-asset-item>
+        <a-asset-item id="shadwo" src="./assets/shadow/scene.gltf"></a-asset-item>
         <img id="ground-cobble" src="./assets/ground.jpg" /> <!--https://cdn.aframe.io/a-painter/images/floor.jpg -->
         <audio id="getout" src="./assets/500616__vanishedillusion__get-out.wav" preload="auto"></audio>
         <audio id="poison" src="./assets/517917__womb-affliction__female-singing-poison-in-harmony.flac" preload="auto"></audio>
@@ -88,9 +89,6 @@
 
       <a-box src="#clue1" position="-1 0.5 -3" rotation="0 45 0"  animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true" shadow></a-box>
       <a-sphere position="-1 1.35 -3" radius="1.35" color="#000000" scale-down-on-mouseclick shadow></a-sphere>
-      <!-- <a-cylinder position="-6 0.75 -3" radius="1.1" height="0.1" color="#FFFFFF" text="color: #0000ff; value: You need the sung and unwritten word to answer this question: What can be (the word)?; align: left; anchor: align; baseline: bottom;" shadow></a-cylinder>
-      <a-cylinder position="-4.23684 0 -0.40359" radius="1.1" height="0.1" color="#FFFFFF" text="color: #000000; value: You need the sung and unwritten word to answer this question: What can be (the word)?; align: center; anchor: align; baseline: bottom; width: 2;" material="depthWrite: false; opacity: 0.4; side: double; blending: additive; emissive: #000000; metalness: 0.7" shadow></a-cylinder> -->
-      <a-cylinder position="6.84351 0 -8.46528" radius="1.1" height="0.1" color="#FFFFFF" text="color: #000000; value: You need the sung and unwritten word to answer this question: What can be (the word)?; align: center; anchor: align; baseline: bottom; width: 2" material="depthWrite: false; opacity: 0.4; side: double; blending: additive; emissive: #000000; metalness: 0.7" shadow></a-cylinder>
       <a-sphere
         src="#clue2" 
         position="-10 .1 -6" 
@@ -100,7 +98,8 @@
         scale-up-on-mouseclick 
       ></a-sphere>
       <a-circle src="#clue3" position="11.03481 1.92923 -9.90231" radius="0.7" depth="0.1" rotation="0 360 0" width="10"></a-circle>
-
+      <a-cylinder text-opacity-up-on-hover position="6.84351 0 -8.46528" radius="1.1" height="0.1" color="#FFFFFF" text="value: You need the sung and unwritten word to answer this question: What can be (the word)?; align: center; anchor: align; baseline: bottom; width: 2; opacity: 0.1;" material="depthWrite: false; opacity: 0.4; side: double; blending: normal; emissive: #000000; metalness: 0.7" shadow></a-cylinder>
+      
       <a-text
         change-text-on-mouseclick
         text="value: CODEBOX; align: center; anchor: align; baseline: center;"
@@ -135,7 +134,7 @@
         <a-sphere visible="false" position="0 1.1 -0.4" radius="0.6" height="0.5" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text__foo="color: #892424; lineHeight: 70; side: double; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever........ ; width: 0.5; align: center; anchor: align; baseline: center;">
         </a-sphere>
       </a-entity>
-      <a-entity gltf-model="#seahorse" animation-mixer="clip: *; loop: once; clampWhenFinished: true; on: click; " position="10.36113 2.12966 -3.97828" scale="0.3 0.3 0.3" rotation="0 140 0" sound="src: #getout; on: click" shadow></a-entity>
+      <a-entity gltf-model="#seahorse" animation-mixer="clip: *" position="10.36113 2.12966 -3.97828" scale="0.3 0.3 0.3" rotation="0 140 0" sound="src: #getout; on: click" shadow></a-entity>
       <a-entity gltf-model="#plantinbox" animation-mixer="clip: *;" position="0.81895 0 9" rotation="0 160 0" sound="src: #poison; on: click" shadow></a-entity>
 
       <a-entity 
@@ -170,10 +169,9 @@
   animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave" 
   
 - fonts 
-- third clue
 -shadow animate out of the door in like three seconds
 - integrate more animations.. 
 -click-sound when clicking on the codeboxes
 
--fog evtl (but the second clue?!)
+-fog on each object (start with plantInABox)
 -->

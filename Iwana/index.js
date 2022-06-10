@@ -39,14 +39,10 @@ const solutionIsCorrect = [false, false, false]
 const changePassword = (password, el) => {
   let newPassword = "";
   let indexNow = password.findIndex((x)=>(x === el.getAttribute('text').value ));
-  console.log("INDEXNOW FIRST: ", indexNow)
   if (indexNow === -1 || indexNow === (password.length -1)){
     newPassword = password[0]
-    console.log("NEW PASSWORD 0", newPassword )
   }else {
     newPassword = password[indexNow+1]
-    console.log("INDEXNOW +1", indexNow+1)
-    console.log("NEW PASSWORD", newPassword )
   }
   el.setAttribute("value", newPassword)
   changeSolution(password, newPassword)
@@ -55,7 +51,6 @@ const changePassword = (password, el) => {
 const changeSolution = (password, newPassword) => {
   if(password[0] === "ART"){
     newPassword === "TECHNOLOGY" ? solutionIsCorrect[0] = true : solutionIsCorrect[0] = false
-    console.log("SOLUTION CORRECT OR NOT: ",solutionIsCorrect[0])
   } else if(password[0] === "IS"){
     newPassword === "MEANS" ? solutionIsCorrect[1] = true : solutionIsCorrect[1] = false
   } else{
@@ -162,5 +157,29 @@ AFRAME.registerComponent("scale-up-on-mouseclick", {
      // perhaps with mouseenter, -leave?
     // take away the changes when leaving??
     });
+  }
+});
+
+
+// TO DO AND FIGURE OUT HOW TO ACCESS THE OPACITY (otherwise make the same as on hover above with visible?)
+AFRAME.registerComponent("text-opacity-up-on-hover", {
+  schema: {
+    opacity: {default: 1, type: "int"}
+  },
+
+  init: function () {
+    let data = this.data;
+    let el = this.el;
+    const defaultOpacity = el.getAttribute("text")
+  
+    
+    console.log("DEFAULT OPACITY: ", defaultOpacity)
+  //   el.addEventListener('mouseenter', function () {
+  //     el.object3D.children[0].visible = data.visible
+  //   });
+
+  //   el.addEventListener('mouseleave', function () {
+  //     el.object3D.children[0].visible = defaultVisibility;
+  //   });
   }
 });
