@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time machine - Steampunk</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="../Assets/time_travel_1.mp4" as="video" type="video/mp4">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
     <script src="https://unpkg.com/aframe-extras@6.1.0/dist/aframe-extras.loaders.min.js"></script>
@@ -57,7 +58,7 @@
     </div>
 
     <a-scene fog="type: linear; color: #666666; near: 0; far: 20" id="scene" shadow="type: pcfsoft" vr-mode-ui="false" cursor="rayOrigin: mouse">
- <!-- #333366 #666666 #FFFFCC -->
+    <!-- #333366 #666666 #FFFFCC -->
       <a-assets>
         <a-asset-item id="airshipfish" src="./assets/airshipfish/scene.gltf"></a-asset-item>
         <a-asset-item id="plantinbox" src="./assets/plantinbox/scene.gltf"></a-asset-item>
@@ -66,6 +67,7 @@
         <a-asset-item id="seahorse" src="./assets/seahorse/scene.gltf"></a-asset-item>
         <a-asset-item id="heartglass" src="./assets/heartglass/scene.gltf"></a-asset-item>
         <a-asset-item id="shadow" src="./assets/shadow/scene.gltf"></a-asset-item>
+        <a-asset-item id="shrimp" src="./assets/shrimp/scene.gltf"></a-asset-item>
         <img id="ground-cobble" src="./assets/ground.jpg" /> <!--https://cdn.aframe.io/a-painter/images/floor.jpg -->
         <audio id="getout" src="./assets/500616__vanishedillusion__get-out.wav" preload="auto"></audio>
         <audio id="poison" src="./assets/517917__womb-affliction__female-singing-poison-in-harmony.flac" preload="auto"></audio>
@@ -76,7 +78,6 @@
         <img id="door" src="./assets/door_basic.png" />
         <img id="codebox" src="./assets/Codebox.png" />
         <img id="clue3" src="./assets/image_clue3.png" />
-
       </a-assets>
 
       <a-plane src="#ground-cobble"  rotation="-90 0 0" width="30" height="20" repeat="20 10"></a-plane>
@@ -87,19 +88,6 @@
       <a-box id="ceiling" position="0 10 0" depth="0.1" rotation="-90 0 0" width="30" height="20" color="#000000"></a-box>
       <a-circle src="#door" width="10" position="-14.9 1.4 -7.2" radius="0.7" rotation="0 -270 0"></a-circle>
 
-      <a-box src="#clue1" position="-1 0.5 -3" rotation="0 45 0"  animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true" shadow></a-box>
-      <a-sphere position="-1 1.35 -3" radius="1.35" color="#000000" scale-down-on-mouseclick shadow></a-sphere>
-      <a-sphere
-        src="#clue2" 
-        position="-10 .1 -6" 
-        radius="0.1" 
-        animation="property: object3D.position.z; to: -9.8; dir: alternate; dur: 3000; loop: true" 
-        animation__1="property: rotation; to: -360 0 0; dir: alternate; dur: 3000; loop: true"
-        scale-up-on-mouseclick 
-      ></a-sphere>
-      <a-circle src="#clue3" position="11.03481 1.92923 -9.90231" radius="0.7" depth="0.1" rotation="0 360 0" width="10"></a-circle>
-      <a-cylinder text-opacity-up-on-hover position="6.84351 0 -8.46528" radius="1.1" height="0.1" color="#FFFFFF" material="depthWrite: false; opacity: 0.4; side: double; blending: normal; emissive: #000000; metalness: 0.7" shadow></a-cylinder>
-      
       <a-text
         change-text-on-mouseclick
         text="value: CODEBOX; align: center; anchor: align; baseline: center;"
@@ -128,14 +116,51 @@
         material="src:#codebox">
       </a-text>
 
-      <a-entity id="shadowLeave" gltf-model="#shadow" animation-mixer="clip: *" animation="property: scale; to: .1 .1 .1; dur: 3000; loop: false; startEvents: startanim001" animation__leave="property: object3D.position.x; to: -17; dur: 3000; loop: false; startEvents: startanim002" animation__leave1="property: object3D.position.y; to: 2; dur: 3000; loop: false; startEvents: startanim003" position="-14 0 -7" scale=".5 .5 .5" rotation="0 -90 0"></a-entity>
+      <a-box src="#clue1" position="-1 0.5 -3" rotation="0 45 0"  animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true" shadow></a-box>
+      <a-sphere position="-1 1.35 -3" radius="1.35" color="#000000" scale-down-on-mouseclick shadow></a-sphere>
+      <a-sphere
+        src="#clue2" 
+        position="-10 .1 -6" 
+        radius="0.1" 
+        animation="property: object3D.position.z; to: -9.8; dir: alternate; dur: 3000; loop: true" 
+        animation__1="property: rotation; to: -360 0 0; dir: alternate; dur: 3000; loop: true"
+        scale-up-on-mouseclick 
+      ></a-sphere>
+      <a-circle src="#clue3" position="11.03481 1.92923 -9.90231" radius="0.7" depth="0.1" rotation="0 360 0" width="10"></a-circle>
+      <a-cylinder text-on-hover position="6.84351 0 -8.46528" radius="1.1" height="0.1" color="#FFFFFF" material="depthWrite: false; opacity: 0.4; side: double; blending: normal; emissive: #000000; metalness: 0.7" shadow></a-cylinder>
+      <a-entity gltf-model="#plantinbox" animation-mixer="clip: *;" position="0.81895 0 9" rotation="0 160 0" sound="src: #poison; on: click; rolloffFactor: 1.5" shadow></a-entity>
+      <a-entity 
+        id="shadowLeave" 
+        gltf-model="#shadow" 
+        position="-14 0 -7" 
+        scale=".5 .5 .5" 
+        rotation="0 -90 0"
+        animation-mixer="clip: *" 
+        animation="property: scale; to: .1 .1 .1; dur: 3000; loop: false; startEvents: startanim001" 
+        animation__leave="property: object3D.position.x; to: -17; dur: 3000; loop: false; startEvents: startanim002" 
+        animation__leave1="property: object3D.position.y; to: 2; dur: 3000; loop: false; startEvents: startanim003">
+      </a-entity>
       <a-entity gltf-model="#fox" text-visible-on-hover animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0" shadow>
-        <a-sphere visible="false" position="0 1.1 -0.4" radius="0.6" height="0.5" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text__foo="color: #892424; lineHeight: 70; side: double; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever........ ; width: 0.5; align: center; anchor: align; baseline: center;">
+        <a-sphere 
+          visible="false" 
+          position="0 1.1 -0.4" 
+          radius="0.6" 
+          height="0.5" 
+          color="#FFFFFF" 
+          material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" 
+          geometry="radius: 0.3" 
+          text__foo="color: #892424; lineHeight: 70; side: double; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever........ ; width: 0.5; align: center; anchor: align; baseline: center;">
         </a-sphere>
       </a-entity>
-      <a-entity gltf-model="#seahorse" animation-mixer="clip: *" position="10.36113 2.12966 -3.97828" scale="0.3 0.3 0.3" rotation="0 140 0" sound="src: #getout; on: click" shadow></a-entity>
-      <a-entity gltf-model="#plantinbox" animation-mixer="clip: *;" position="0.81895 0 9" rotation="0 160 0" sound="src: #poison; on: click" shadow></a-entity>
-
+      <a-entity 
+        gltf-model="#seahorse" 
+        animation-mixer="clip: *" 
+        position="10.36113 2.12966 -3.97828" 
+        scale="0.3 0.3 0.3" 
+        rotation="0 140 0" 
+        sound="src: #getout; on: click; volume: 5; rolloffFactor: 0.5" 
+        shadow>
+      </a-entity>
       <a-entity 
         gltf-model="#airshipfish" 
         animation="property: rotation; to: 0 0 0; easing: linear; dur: 10000; loop: true" 
@@ -144,21 +169,24 @@
         rotation="0 360 0" 
         shadow>
       </a-entity>
-
+      <a-entity gltf-model="#shrimp" animation-mixer="clip: *;" position="-8.4 8 7.3" scale=".7 .7 .7"></a-entity>
       <a-entity gltf-model="#steamboat" text-visible-on-hover animation-mixer="clip: *;" position="-8.4 1.8 7.3"scale="0.4, 0.4, 0.4" rotation="0, 0, 0" shadow>
-        <a-sphere visible="false" position="0 1.5 -0.4" radius="0.8" rotation="0 260 0" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text="color: #892424; side: double;  value: I can fly! Fly with me! ; align: center; anchor: align; baseline: center;">
+        <a-sphere 
+          visible="false" 
+          position="0 1.5 -0.4" 
+          radius="0.8" 
+          rotation="0 260 0" 
+          color="#FFFFFF" 
+          material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" 
+          geometry="radius: 0.3" 
+          text="color: #892424; side: double;  value: I can fly! Fly with me! ; align: center; anchor: align; baseline: center;">
         </a-sphere>
       </a-entity>
-      <a-sphere position="-9 0.9 7" radius="0.9" color="#000000" material="color:  #a51d1d; opacity: 0.6; metalness: .8; blending:  multiply;  emissive:  #272020;  emissiveIntensity:  0.01;" shadow></a-sphere>
-      <a-sphere position="-9 0.9 7" radius="0.45" color="#000000"  shadow></a-sphere>
+      <a-sphere position="-9 0.9 7" radius="0.9" color="#000000" material="color: #a51d1d; opacity: 0.6; metalness: .8; blending:  multiply;  emissive:  #272020;  emissiveIntensity:  0.01;" shadow></a-sphere>
+      <a-sphere position="-9 0.9 7" radius="0.45" color="#000000" shadow></a-sphere>
 
 
-      <a-camera position="-10 1.7 3" rotation="0, 80, 0" look-controls="reverseMouseDrag: true"> 
-        <!-- WHERE TO PLACE THIS A-ENTITY?? AND WHY IS THERE STILL THE WARNING AND WHY WAS IT ALWAYS TWO CLICKES OR EVEN HOVER?!?! -->
-        <!-- <a-entity cursor raycaster="far: 20; interval: 100; objects: .clickable"></a-entity> -->
-        <!-- <a-cursor color="#FFFF00"></a-cursor> -->
-      </a-camera>
-
+      <a-camera position="-10 1.7 3" rotation="0, 80, 0" look-controls="reverseMouseDrag: true"></a-camera>
     </a-scene>
   </body>
 </html>
@@ -167,10 +195,9 @@
   animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
   animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave" 
   
-- fonts 
--shadow animate out of the door in like three seconds
-- integrate more animations.. 
--click-sound when clicking on the codeboxes
-
--fog on each object (start with plantInABox)
+IMPLEMENT WHEN TIME
+- font steampunk
+- integrate more animations 
+- click-sound when clicking on the codeboxes
+- fog on each object (start with plantInABox)
 -->
