@@ -41,8 +41,7 @@ setTimeout(function () {
 }, 11000);
 
 setTimeout(function () {
-  itsyouDiv.style.backgroundColor = "#0000009f";
-  itsyouDiv.innerHTML = `<p>It's you all along...</p>`;
+  msgBox.innerHTML = `<p>It's me all along...</p>`;
 }, 15000);
 
 setTimeout(function () {
@@ -50,18 +49,18 @@ setTimeout(function () {
   msgBox.innerHTML = "";
   document.getElementById("final-body-id").classList.remove("final-body");
   document.getElementById("final-body-id").classList.add("final-final-body");
-  itsyouDiv.innerHTML = `<p id='ending' style='font-size: 5rem'>But is it the same you?</p>`;
+  itsyouDiv.innerHTML = `<p id='ending' style='font-size: 5rem'>But is it the same me?</p>`;
 }, 18000);
 
-setTimeout(function () {
-  let i = 0;
-  const end = "The End";
-  document.getElementById("ending").innerHTML = "";
-  (function typeWriter() {
-    if (i < end.length) {
-      document.getElementById("ending").innerHTML += end.charAt(i);
-      i++;
-      setTimeout(typeWriter, 90);
-    }
-  })();
-}, 20000);
+// setTimeout(function () {
+//   let i = 0;
+//   const end = "The End";
+//   document.getElementById("ending").innerHTML = "";
+//   (function typeWriter() {
+//     if (i < end.length) {
+//       document.getElementById("ending").innerHTML += end.charAt(i);
+//       i++;
+//       setTimeout(typeWriter, 90);
+//     }
+//   })();
+// }, 20000);
