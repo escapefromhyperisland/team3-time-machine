@@ -1,6 +1,8 @@
 const background = new Audio("./assets/384713__ramonmineiro__mad-scientist-lab-loopable.mp3")
 const solutionMusic = new Audio("./assets/215983__bushi3593__creaking-of-door-from-outside.wav")
+const doorShadowEscapingCreak = new Audio("./assets/split.wav")
 solutionMusic.volume = 0.3;
+doorShadowEscapingCreak.volume = 0.3;
 background.volume = 0.2;
 background.loop = true;
 let musicIsPlaying = true;
@@ -21,11 +23,20 @@ function closePopup() {
   // SOLUTION MUSIC ONLY PLAYING IF SHADOW DISAPEARS AND NOT INTERFERING WIth backGROUND musiC
   setTimeout(()=>{
     background.play()
-    solutionMusic.play()
     document.querySelector("#timetravel").style.visibility = "hidden";
     document.querySelector("#music-button").style.visibility = "visible";
     document.querySelector("#info-button").style.visibility = "visible";
+    document.querySelector("#shadowLeave").emit("startanim001", null, false);
+    document.querySelector("#shadowLeave").emit("startanim002", null, false);
+    document.querySelector("#shadowLeave").emit("startanim003", null, false);
+    setTimeout(()=>{
+      document.querySelector("#shadowLeave").setAttribute("visible", false)
+    }, 3000);
   }, 7000)
+  setTimeout(()=>{
+    doorShadowEscapingCreak.play()
+  }, 9000)
+  
 }
 
 function togglePopup() {
@@ -167,12 +178,8 @@ AFRAME.registerComponent("scale-up-on-mouseclick", {
 AFRAME.registerComponent("text-opacity-up-on-hover", {
   
   init: function () {
-    let data = this.data;
     let el = this.el;
-    const defaultOpacity = el
   
-    
-    console.log("DEFAULT OPACITY: ", defaultOpacity)
     el.addEventListener('mouseenter', function () {
       el.setAttribute("text", {value: "You need the sung and unwritten word to answer this question: What can be (the word)?", align: "center", anchor: "align", baseline: "bottom", width: 2})
     });

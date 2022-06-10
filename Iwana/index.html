@@ -15,7 +15,7 @@
 
   <body>
     <script src="index.js"></script>
-    <!-- <div id="popup">
+    <div id="popup">
       <p>
         “Oh…….. what is this on my head….… I feel dizzy………. a BUMP!?!…….. what happened…… Oh wait….WAIT…. my time-machine!!…..I think somebody used it?!?!?…. ##€%!?&!…… damn, I knew I did too good on the user-interface!!… MY GOSH!! The WORLD is in danger!! If this person leaves anything behind, the time-line will break and the world explodes!!!!!!”
       </p>
@@ -54,7 +54,7 @@
         <br/>
         <button id="next-level-button" onclick="nextLevel()">.......HURRY!!!!!!!!!!</button>
       </div>
-    </div> -->
+    </div>
 
     <a-scene fog="type: linear; color: #666666; near: 0; far: 20" id="scene" shadow="type: pcfsoft" vr-mode-ui="false" cursor="rayOrigin: mouse">
  <!-- #333366 #666666 #FFFFCC -->
@@ -128,7 +128,7 @@
         material="src:#codebox">
       </a-text>
 
-    
+      <a-entity id="shadowLeave" gltf-model="#shadow" animation-mixer="clip: *" animation="property: scale; to: .1 .1 .1; dur: 3000; loop: false; startEvents: startanim001" animation__leave="property: object3D.position.x; to: -17; dur: 3000; loop: false; startEvents: startanim002" animation__leave1="property: object3D.position.y; to: 2; dur: 3000; loop: false; startEvents: startanim003" position="-14 0 -7" scale=".5 .5 .5" rotation="0 -90 0"></a-entity>
       <a-entity gltf-model="#fox" text-visible-on-hover animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0" shadow>
         <a-sphere visible="false" position="0 1.1 -0.4" radius="0.6" height="0.5" color="#FFFFFF" material="depthWrite: false; blending: additive; metalness: 0.2; width: 1" geometry="radius: 0.3" text__foo="color: #892424; lineHeight: 70; side: double; value: We are trapped here.... Only one person found the hidden passwords and went out.....Can you do it? Or stay with us forever........ ; width: 0.5; align: center; anchor: align; baseline: center;">
         </a-sphere>
