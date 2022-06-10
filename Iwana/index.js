@@ -181,7 +181,7 @@ AFRAME.registerComponent("text-on-hover", {
     let el = this.el;
   
     el.addEventListener('mouseenter', function () {
-      el.setAttribute("text", {value: "You need the sung and unwritten word to answer this question: What can be (the word)?", align: "center", anchor: "align", baseline: "bottom", width: 2, opacity: 0.5})
+      el.setAttribute("text", {value: "You need the sung and unwritten word to answer this question: What can be (the word)?", align: "center", anchor: "align", baseline: "bottom", width: 2})
     });
     el.addEventListener('mouseleave', function () {
       el.removeAttribute("text")
