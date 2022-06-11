@@ -20,23 +20,23 @@ function closePopup() {
   document.querySelector("#travel-video").play()
   document.querySelector("#background-black").style.visibility = "hidden";
 
-  // SOLUTION MUSIC ONLY PLAYING IF SHADOW DISAPEARS AND NOT INTERFERING WIth backGROUND musiC
   setTimeout(()=>{
     background.play()
     document.querySelector("#timetravel").style.visibility = "hidden";
     document.querySelector("#music-button").style.visibility = "visible";
     document.querySelector("#info-button").style.visibility = "visible";
-    document.querySelector("#shadowLeave").emit("startanim001", null, false);
-    document.querySelector("#shadowLeave").emit("startanim002", null, false);
-    document.querySelector("#shadowLeave").emit("startanim003", null, false);
+    document.querySelector("#shadowLeave").emit("scaleShadowAnim", null, false);
+    document.querySelector("#shadowLeave").emit("positionXShadowAnim", null, false);
+    document.querySelector("#shadowLeave").emit("positionYShadowAnim", null, false);
+    document.querySelector("#workshop-door").emit("rotateDoorAnim", null, false);
+    document.querySelector("#workshop-door").emit("positionDoorAnim", null, false);
+    setTimeout(()=>{
+      doorShadowEscapingCreak.play()
+    }, 2000)
     setTimeout(()=>{
       document.querySelector("#shadowLeave").setAttribute("visible", false)
     }, 3000);
-  }, 7000)
-  setTimeout(()=>{
-    doorShadowEscapingCreak.play()
-  }, 9000)
-  
+  }, 7000)  
 }
 
 function togglePopup() {
@@ -87,36 +87,36 @@ const checkSolution = () => {
 function fade() {
   background.volume = background.volume - 0.05;
   if(background.volume <= 0){
-      clearInterval(interval);
-      background.pause();
-      background.volume = .2;
+    clearInterval(interval);
+    background.pause();
+    background.volume = .2;
   }
 }
 
 AFRAME.registerComponent("change-text-on-mouseclick", {
 
-    update: function () {
-      const password = ["ART", "TECHNOLOGY", "PHILOSOPHY", "GEOGRAPHY", "PLAYFULNESS", "WITCHERY"]
-      var el = this.el;
-      el.addEventListener('click', function (){changePassword(password, el)})
+  update: function () {
+    const password = ["ART", "TECHNOLOGY", "PHILOSOPHY", "GEOGRAPHY", "PLAYFULNESS", "WITCHERY"]
+    var el = this.el;
+    el.addEventListener('click', function (){changePassword(password, el)})
   }
 });
 
 AFRAME.registerComponent("change-text1-on-mouseclick", {
 
-    update: function () {
-      const password = ["IS", "CAN", "DOES", "SAYS", "MEANS", "LETS"]
-      var el = this.el;
-      el.addEventListener('click', function (){changePassword(password, el)})
+  update: function () {
+    const password = ["IS", "CAN", "DOES", "SAYS", "MEANS", "LETS"]
+    var el = this.el;
+    el.addEventListener('click', function (){changePassword(password, el)})
   }
 });
 
 AFRAME.registerComponent("change-text2-on-mouseclick", {
 
-    update: function () {
-      const password = ["NOTHING", "MOONSHINE", "SOMETHING", "THE WORLD", "EVERYTHING", "SUNSHINE"]
-      let el = this.el;
-      el.addEventListener('click', function (){changePassword(password, el)})
+  update: function () {
+    const password = ["NOTHING", "MOONSHINE", "SOMETHING", "THE WORLD", "EVERYTHING", "SUNSHINE"]
+    let el = this.el;
+    el.addEventListener('click', function (){changePassword(password, el)})
   }
 });
 
@@ -142,7 +142,7 @@ AFRAME.registerComponent("text-visible-on-hover", {
 
 AFRAME.registerComponent("scale-down-on-mouseclick", {
   schema: {
-    to: {default: "0.5 0.5 0.5", type: "vec3"}
+    to: {default: {x: 0.5, y: 0.5, z: 0.5}, type: "vec3"}
   },
 
   init: function () {
@@ -156,8 +156,8 @@ AFRAME.registerComponent("scale-down-on-mouseclick", {
 
 AFRAME.registerComponent("scale-up-on-mouseclick", {
   schema: {
-    to: {default: "3 3 3", type: "vec3"},
-    radius: {type: "int", default: 4},
+    to: {default: {x: 3, y: 3, z: 3}, type: "vec3"},
+    radius: {default: 4, type: "int"},
     positiony: {default: .3, type: "number"}
   },
 
@@ -167,8 +167,6 @@ AFRAME.registerComponent("scale-up-on-mouseclick", {
     this.el.addEventListener("click", function () {
       el.object3D.scale.copy(data.to);
       el.object3D.position.y = data.positiony;
-     // perhaps with mouseenter, -leave?
-    // take away the changes when leaving??
     });
   }
 });

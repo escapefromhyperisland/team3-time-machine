@@ -86,7 +86,17 @@
       <a-box src="#wall1" position="-15 5 0" depth="0.1" rotation="0 90 0" width="20" height="10" ></a-box>
       <a-box src="#wall2" position="0 5 -10" depth="0.1" rotation="0 0 0" width="30" height="10" ></a-box>
       <a-box id="ceiling" position="0 10 0" depth="0.1" rotation="-90 0 0" width="30" height="20" color="#000000"></a-box>
-      <a-circle src="#door" width="10" position="-14.9 1.4 -7.2" radius="0.7" rotation="0 -270 0"></a-circle>
+      <a-circle 
+        id="workshop-door" 
+        src="#door" 
+        width="10" 
+        position="-13.9 1.4 -7.2" 
+        radius="0.7" 
+        rotation="0 -210 0" 
+        animation="property: rotation; to: 0 -270 0; dur: 3000; loop:false; startEvents: rotateDoorAnim"
+        animation__close="property: object3D.position.x; to: -14.9; dur: 3000; loop: false; startEvents: positionDoorAnim">
+      </a-circle>
+      <!-- loop: false; startEvents: startanim004; -->
 
       <a-text
         change-text-on-mouseclick
@@ -136,9 +146,9 @@
         scale=".5 .5 .5" 
         rotation="0 -90 0"
         animation-mixer="clip: *" 
-        animation="property: scale; to: .1 .1 .1; dur: 3000; loop: false; startEvents: startanim001" 
-        animation__leave="property: object3D.position.x; to: -17; dur: 3000; loop: false; startEvents: startanim002" 
-        animation__leave1="property: object3D.position.y; to: 2; dur: 3000; loop: false; startEvents: startanim003">
+        animation="property: scale; to: .1 .1 .1; dur: 3000; loop: false; startEvents: scaleShadowAnim" 
+        animation__leave="property: object3D.position.x; to: -17; dur: 3000; loop: false; startEvents: positionXShadowAnim" 
+        animation__leave1="property: object3D.position.y; to: 2; dur: 3000; loop: false; startEvents: positionYShadowAnim">
       </a-entity>
       <a-entity gltf-model="#fox" text-visible-on-hover animation-mixer="clip: *;" position="10.5 0 4"scale="3, 3, 1" rotation="0, -80, 0" shadow>
         <a-sphere 
@@ -196,6 +206,8 @@
   animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave" 
   
 IMPLEMENT WHEN TIME
+- README with thanks to the gltf-model-designer
+- mention game for desktop
 - font steampunk
 - integrate more animations 
 - click-sound when clicking on the codeboxes
