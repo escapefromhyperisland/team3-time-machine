@@ -1,7 +1,6 @@
 <html><!-- HEADER --><head>
 
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/Ian/style.css"/>
 
 <title>{pg}CHAPTER 4 - 2082 AD{pg}You stumble into a dark room with stuffed air... It's so dark it's impossible to see anything, and dangers might lurk everywhere...{pg}"Where am I.. is this.. the future...?"</title>
 
@@ -2330,7 +2329,7 @@ body {
 	margin:0px;
 	padding:0px;
 	overflow:hidden;
-	background:#ffffff;
+	background:black;
 }
 
 #game {
@@ -2340,6 +2339,22 @@ body {
 	margin:auto;
 	display:block;
 }
+
+#warp-overlay {
+    display: block;
+  }
+  
+  .bg-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+    }
 </style>
 
 <!-- SCRIPTS -->
@@ -12698,7 +12713,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 
 <!-- DOCUMENT BODY -->
-<body style="background-color: black;" onload="startExportedGame()">
+<body onload="startExportedGame()">
 	<div id="warp-overlay">
 		<video
 		  id="timetravel-video"
