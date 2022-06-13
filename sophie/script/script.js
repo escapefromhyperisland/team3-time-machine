@@ -46,11 +46,11 @@ const selectOption = (option) => {
     var s = document.getElementById("container").style;
     s.opacity = 1;
     (function fade() {
-      (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 130);
+      (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 290);
     })();
     setTimeout(function () {
       location.href = "maze.html";
-    }, 2000);
+    }, 4000);
     //loadScript("maze.js"); //CODE BELOW LOADsCRIPT WON'T BE LOADED
   }
   state = Object.assign(state, option.setState);
@@ -95,7 +95,7 @@ const textNodes = [
       },
       {
         //if the user is choosing this option the room/world should appear
-        text: "Hmmm, who would decorate the room with all this medieval bagpipes?",
+        text: "Hmmm, who would decorate the room with all these medieval bagpipes?",
         //soundeffects should come in when pressing that choice!
         // requiredState: (currentState) => currentState.world,
         // setState: { world: false },
@@ -114,7 +114,7 @@ const textNodes = [
   },
   {
     id: 9,
-    text: "ah, what is happening???",
+    text: "Wait, did I hear noises?! Is there someone here?",
     //options: [],
   },
   {
