@@ -72,7 +72,7 @@ const textNodes = [
         // requiredState: (currentState) => currentState.world,
         // setState: { world: true },
         //next would be the world showing up//maybe just leading to a new page?
-        nextText: 9,
+        nextText: 2,
       },
       {
         text: "Scanning my body for injuries.",
@@ -87,7 +87,7 @@ const textNodes = [
   },
   {
     id: 2,
-    text: "Ok ok. I get it. You are scared. I would be too. Look around you: In which kind of age do you think you are?",
+    text: "Look around you: In which kind of age do you think you are?",
     options: [
       {
         text: "This looks like some motherf***ing sci-fi shit, män!",
@@ -95,12 +95,12 @@ const textNodes = [
       },
       {
         //if the user is choosing this option the room/world should appear
-        text: "Hmmm, who would decorate the room with all these medieval bagpipes?",
+        text: "Who would decorate the room with all these medieval bagpipes?",
         //soundeffects should come in when pressing that choice!
         // requiredState: (currentState) => currentState.world,
         // setState: { world: false },
         //next would be the world showing up//maybe just leading to a new page?
-        nextText: 9,
+        nextText: 3,
       },
       {
         text: "Is this not the place I was getting unconscious?",
@@ -108,6 +108,34 @@ const textNodes = [
       },
       {
         text: "No shit clue. But it better is an age with painkillers!!!!",
+        nextText: 10,
+      },
+    ],
+  },
+  {
+    id: 3,
+    text: "Good good. When were the first bagpipes invented?",
+    options: [
+      {
+        text: "1575",
+        nextText: 5,
+      },
+      {
+        text: "1000 BC",
+        nextText: 4,
+      },
+    ],
+  },
+  {
+    id: 4,
+    text: "Good job! Who said the following quote: 'These are bagpipes. I understand the inventor of the bagpipes was inspired when he saw a man carrying an indignant, asthmatic pig under his arm. Unfortunetaly, the man-made sound never equalled the purity of the sound achieved by the pig.'",
+    options: [
+      {
+        text: "Alfred Hitchcock",
+        nextText: 9,
+      },
+      {
+        text: "William Wallace from Braveheart",
         nextText: 5,
       },
     ],
@@ -119,7 +147,7 @@ const textNodes = [
   },
   {
     id: 10,
-    text: "Ok bye",
+    text: "Ok bye!",
     options: [
       {
         text: "Start Over!",
@@ -129,7 +157,7 @@ const textNodes = [
   },
   {
     id: 5,
-    text: "You don't get it?!",
+    text: "Bzz, that was just wrong!",
     options: [
       {
         text: "Try Again!",
