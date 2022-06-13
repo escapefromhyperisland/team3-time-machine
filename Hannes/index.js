@@ -1,4 +1,4 @@
-const dinosound = new Audio("/assets/dinosound.mp3")
+const dinosound = new Audio("./assets/dinosound.mp3")
 dinosound.volume = 0.2;
 dinosound.loop = true;
 
@@ -15,7 +15,7 @@ function closeText1() {
     dinosound.play()
     document.querySelector("#timetravel").style.visibility = "hidden";
     document.querySelector("#info-button").style.visibility = "visible";
-  }, 7000)
+  }, 7500)
 }
 
 function toggleInfo() {
