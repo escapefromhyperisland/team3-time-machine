@@ -1,0 +1,121 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+    
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+    
+  button {
+    cursor: pointer;
+  }
+  
+  #text1-button {
+    color:rgb(255, 255, 255);
+    background:rgb(21, 21, 32);
+    border: 7px rgb(255, 255, 255) solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 25px;
+    
+  }
+  #boxHatch{
+    color: aqua;
+  }
+
+  #text1-button:hover {
+    background-color: rgb(57, 59, 83);
+  }
+  #text1, #info-popup {
+    border-radius: 25px;
+    position: fixed;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(21, 21, 32);
+    color: white;
+    max-width: 40rem;
+    line-height: 2;
+    font-size: 2rem;
+    padding: 2rem;
+    border: 7px rgb(255, 255, 255) solid;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    text-align: center;
+  }
+  #info-popup{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .hidden{
+    visibility: hidden;
+  }
+  
+  #text1-background{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    z-index: 2;
+  }
+  #timetravel{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    z-index: 1;
+  
+  }
+  
+  #timetravel video{
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #scene1{
+   position: relative;
+   z-index: 0;
+  }
+  
+  #popup button {
+    padding: 1rem;
+    border: 5px white solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: rgb(41, 44, 73);
+  }
+  
+  #info-button {
+    background:rgba(21, 21, 32, 0.562);
+    position: fixed;
+    z-index: 2;
+    left: 2rem;
+    top: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;    
+    color: white;
+    border: 3px white solid;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 25px;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+  #info-button:hover {
+    background-color:rgb(21, 21, 32);
+  }
+
+  
+  

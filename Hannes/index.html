@@ -6,17 +6,44 @@
     <script src="https://unpkg.com/aframe-extras@6.1.0/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://unpkg.com/three@0.124.0/examples/js/libs/inflate.min.js"></script>
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
 
   </head>
   <body>
+    <script src="index.js"></script>
     <div>
-      <video>
-        <source src="assets/time_travel_1.mp4" type="video/mp4"> 
+      <div id="text1">
+      <p>
+        “Okey here we go again, time to traveeeeeeeeeeeeeeel!!”
+      </p>
+      <br>
+      <button id="text1-button" onclick="closeText1()">Time travel</button>
+    
+    </div>
+
+    <img id="text1-background" src="assets/space-image.jpg">
+           
+    <div id="timetravel">
+      <video id="travel-video">
+        <source src="./assets/time_travel_1.mp4" type="video/mp4"> 
       </video>
     </div>
-    <a-scene inspector-plugin-recast environment="preset:  forest;  skyColor:  #00bfff;  horizonColor:  #a9e5fe;  lightPosition:  1, 1, 1;  ground:  flat;  groundTexture:  walkernoise;  groundColor:  #909627;  groundColor2:  #e3df68;  dressingColor:  #508349;  dressingVariance:  [object Object];  dressingScale:  1;  dressingAmount:  80;  fog:  0.001; lighting: distant;">
+        
+    <button id="info-button" onclick="toggleInfo()">Info</button>
+
+    <div id="info-popup" class="hidden">
+      <p>Omg what year is it? Where i am i?? Dinosaurs!? Ahhhhh. I better get out of here quick before i get eaten alive.</p>
+      <br>
+      <p>Also im really hungry from all the traveling and my blood sugar is low. I better look around to see if i can find some fruit so i can think straight and find a way out of here</p>
+    </div>
+  
+  
+    <a-scene id="scene1" inspector-plugin-recast environment="preset:  forest;  skyColor:  #00bfff;  horizonColor:  #a9e5fe;  lightPosition:  1, 1, 1;  ground:  flat;  groundTexture:  walkernoise;  groundColor:  #909627;  groundColor2:  #e3df68;  dressingColor:  #508349;  dressingVariance:  [object Object];  dressingScale:  1;  dressingAmount:  80;  fog:  0.001; lighting: distant;">
         <a-assets>
          
             <!-- <a-asset-item id="land" src="forest.glb"></a-asset-item> -->
@@ -27,18 +54,16 @@
             <a-asset-item id="velo" src="assets/Velociraptor.glb"></a-asset-item>
             <a-asset-item id="volc" src="assets/Volcano.glb"></a-asset-item>
             <a-asset-item id="trex2" src="assets/Trex.fbx"></a-asset-item>
-            <a-asset-item id="trap" src="assets/Trap Door.glb"></a-asset-item>
+            <a-asset-item id="hatch" src="assets/Trap Door.glb"></a-asset-item>
+            <a-asset-item id="apple" src="assets/Apple.glb"></a-asset-item>
+            <a-asset-item id="banana" src="assets/Banana.glb"></a-asset-item>
+            <a-asset-item id="cherry" src="assets/Cherry.glb"></a-asset-item>
+            <a-asset-item id="key" src="assets/Key.glb"></a-asset-item>
+            <audio id="bite" src="assets/bite.mp3"></audio>
 
             <img id="sand" src="/assets/sand.jpg"/>
 
-            <a-assets>
-              <audio
-                id="dinosound"
-                src="assets/dinosound.mp3"
-                preload="auto"
-              ></audio>
-              
-            </a-assets>
+           
           
         </a-assets>
 
@@ -53,14 +78,26 @@
 
         <a-gltf-model src="#volc" animation-mixer="clip: *;" position="81 21.55 99" rotation="0 230 0" scale="70 70 70" ></a-gltf-model>
 
-        <a-gltf-model src="#trap" animation-mixer="clip: *;" position="36 0.1 87" rotation="0 260 0" scale="2.5 2.5 2.5" ></a-gltf-model>
-
+       
         
+                
         <a-entity gltf-model="#trex" position="6 0 -3" scale="0.05, 0.1, 0.05" rotation="0, -80, 0" color="green" material="color: red"></a-entity>
 
-        <a-entity sound="src: #dinosound;" geometry="primitive: plane" material="color: blue"></a-entity>
+        <a-entity gltf-model="#apple" position="6 3.1 23.2" scale="0.1, 0.1, 0.1" rotation="0, -80, 0" color="green" material="color: red" event-set__click="visible: false" sound="src: #bite; on: click"></a-entity>a
+        <a-entity gltf-model="#banana" position="9.4 5 -11.4" scale="0.02, 0.02, 0.02" rotation="0, -80, 0" color="green" material="color: red" event-set__click="visible: false" sound="src: #bite; on: click"></a-entity>
+        <a-entity gltf-model="#cherry" position="-18.3 5 -14.7" scale="0.05, 0.05, 0.05" rotation="0, -137, 0" color="green" material="color: red" event-set__click="visible: false" sound="src: #bite; on: click"></a-entity>
 
+        <a-entity gltf-model="#key" position="88.5 0.1 37.5w" scale="2, 2, 2" rotation="0, -137, 0" color="green" material="color: red" event-set__click="nextLevel()"></a-entity>
 
+        
+        
+
+        <a-entity gltf-model="#hatch" id="boxHatch"position="36 0.1 87" scale="2.5 2.5 2.5" depth="5" height="0.5" width="5" length="5" color="" rotation="0 -10 0" event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true" event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false" rotation="" scale="" visible="" material="" geometry="">
+          <a-text id="cylinderText" value="Hmm the hatch seems to be locked. Maybe there is a key laying around somewhere arounda this volcano" color="#FFF" rotation="0 220 0" visible="false" position="1 1 1" geometry="primitive: plane; width: 6; height: 3" material="color: #333" rotation="" scale="0.5, 0.5, 0.5" text="wrapCount: 20; align: center"></a-text>
+        </a-entity>
+    <a-camera><a-cursor></a-cursor></a-camera>
+
+        
 
 
         
