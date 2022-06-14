@@ -67,11 +67,9 @@ const textNodes = [
         nextText: 10,
       },
       {
-        //if the user is choosing this option the room/world should appear
         text: "Checking my environment.",
         // requiredState: (currentState) => currentState.world,
         // setState: { world: true },
-        //next would be the world showing up//maybe just leading to a new page?
         nextText: 2,
       },
       {
@@ -94,17 +92,14 @@ const textNodes = [
         nextText: 5,
       },
       {
-        //if the user is choosing this option the room/world should appear
-        text: "Who would decorate the room with all these medieval bagpipes?",
-        //soundeffects should come in when pressing that choice!
-        // requiredState: (currentState) => currentState.world,
-        // setState: { world: false },
-        //next would be the world showing up//maybe just leading to a new page?
-        nextText: 3,
-      },
-      {
         text: "Is this not the place I was getting unconscious?",
         nextText: 5,
+      },
+      {
+        text: "Hm, all those medieval bagpipes make me suspicious!",
+        // requiredState: (currentState) => currentState.world,
+        // setState: { world: false },
+        nextText: 3,
       },
       {
         text: "No shit clue. But it better is an age with painkillers!!!!",
@@ -114,21 +109,49 @@ const textNodes = [
   },
   {
     id: 3,
-    text: "Good good. When were the first bagpipes invented?",
+    text: "Good good. When were the first real bagpipes invented (like we know them today)?",
     options: [
       {
         text: "1575",
         nextText: 5,
       },
       {
-        text: "1000 BC",
+        text: "13th century",
+        nextText: 6,
+      },
+    ],
+  },
+  {
+    id: 6,
+    text: "Uh lala. 'Nothing better than the sound of a bagpipe' - who said it?",
+    options: [
+      {
+        text: "My friend who plays in a bagpipe band",
+        nextText: 5,
+      },
+      {
+        text: "The one & only Friedrich Nietzsche",
+        nextText: 7,
+      },
+    ],
+  },
+  {
+    id: 7,
+    text: "Were bagpipes used as a weapon of war back in the good old days?",
+    options: [
+      {
+        text: "Yes",
         nextText: 4,
+      },
+      {
+        text: "No",
+        nextText: 5,
       },
     ],
   },
   {
     id: 4,
-    text: "Good job! Who said the following quote: 'These are bagpipes. I understand the inventor of the bagpipes was inspired when he saw a man carrying an indignant, asthmatic pig under his arm. Unfortunetaly, the man-made sound never equalled the purity of the sound achieved by the pig.'",
+    text: "We are getting closer! Who said the following quote: 'These are bagpipes. I understand the inventor of the bagpipes was inspired when he saw a man carrying an indignant, asthmatic pig under his arm. Unfortunetaly, the man-made sound never equalled the purity of the sound achieved by the pig.'",
     options: [
       {
         text: "Alfred Hitchcock",
