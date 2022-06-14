@@ -127,7 +127,7 @@ const textNodes = [
     options: [
       {
         text: "My friend who plays in a bagpipe band",
-        nextText: 5,
+        nextText: 11,
       },
       {
         text: "The one & only Friedrich Nietzsche",
@@ -181,6 +181,16 @@ const textNodes = [
   {
     id: 5,
     text: "Bzz, that was just wrong!",
+    options: [
+      {
+        text: "Try Again!",
+        nextText: 1,
+      },
+    ],
+  },
+  {
+    id: 11,
+    text: "I wish!",
     options: [
       {
         text: "Try Again!",
