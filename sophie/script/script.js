@@ -151,7 +151,7 @@ const textNodes = [
   },
   {
     id: 4,
-    text: "We are getting closer! Who said the following quote: 'These are bagpipes. I understand the inventor of the bagpipes was inspired when he saw a man carrying an indignant, asthmatic pig under his arm. Unfortunetaly, the man-made sound never equalled the purity of the sound achieved by the pig.'",
+    text: "We are getting closer! Who said the following quote: 'I understand the inventor of the bagpipes was inspired when he saw a man carrying an indignant, asthmatic pig under his arm. Unfortunetaly, the man-made sound never equalled the purity of the sound achieved by the pig.'",
     options: [
       {
         text: "Alfred Hitchcock",
