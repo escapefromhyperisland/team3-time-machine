@@ -7,7 +7,7 @@ const collisionCheck = (value) => {
     alert("You lost...try again.");
   }
   if (value === "end-game") {
-    // alert("this is working");
+    alert("oh no, you made it, but the time traveler was faster");
     window.parent.postMessage("nextLevel");
   }
 };
