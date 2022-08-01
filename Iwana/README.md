@@ -17,7 +17,8 @@ In your team, define the world where your browser game exist. Then, individually
 You have created a time-travel-machine but somebody else is now using the machine and you have to chase this person to prevent damage to the world.
 
 My Level <br/>
-You chase the person back to the Steampunk-Time......and then.....play it so you will see more :-)
+You chase the person back to the Steampunk-Time......and then.....play it so you will see more <br/>
+PLAY HERE: https://escapefromhyperisland.github.io/?world=3
 
 📕 Learnings: <br/>
 The fundamentals of Aframe <br/>
