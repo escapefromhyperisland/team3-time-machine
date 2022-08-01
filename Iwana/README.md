@@ -18,7 +18,7 @@ You have created a time-travel-machine but somebody else is now using the machin
 
 My Level <br/>
 You chase the person back to the Steampunk-Time......and then.....play it so you will see more <br/>
-PLAY HERE: https://escapefromhyperisland.github.io/?world=3
+PLAY HERE (only desktop): https://escapefromhyperisland.github.io/?world=3
 
 📕 Learnings: <br/>
 The fundamentals of Aframe <br/>
