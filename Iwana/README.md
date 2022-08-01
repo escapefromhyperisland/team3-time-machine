@@ -8,35 +8,35 @@ In your team, define the world where your browser game exist. Then, individually
 ⌛ Time spent:
 4,5 weeks.
 
-🏁 Goals:
- Try something new
- Experiment and have fun with the code
+🏁 Goals: <br/>
+ Try something new <br/>
+ Experiment and have fun with the code <br/>
  Make three challenges for the player to solve
  
-📔 World 3 - The Story:
+📔 World 3 - The Story: <br/>
 You have created a time-travel-machine but somebody else is now using the machine and you have to chase this person to prevent damage to the world.
 
-My Level
+My Level <br/>
 You chase the person back to the Steampunk-Time......and then.....play it so you will see more :-)
 
-📕 Learnings:
-The fundamentals of Aframe
-The fundamentals of Blender and how to work with 3D objects
-Practising different ideation-tools, creativity and storytelling
+📕 Learnings: <br/>
+The fundamentals of Aframe <br/>
+The fundamentals of Blender and how to work with 3D objects <br/>
+Practising different ideation-tools, creativity and storytelling <br/>
 How to involve AR, Markers and Machine Learning into a project
 
-💻 Tech:
-Aframe
-Vanilla JavaScript
-Blender
+💻 Tech: <br/>
+Aframe <br/>
+Vanilla JavaScript <br/>
+Blender <br/>
 AI Create playform
 
 
-⬇️ Credit for Downloaded Models:
-Koi Fish Steampunk Airship by Jessica Murano 
-SDC2 Final - Stylized Character by Camille Leclercq
-The Steampunk Heartglass (fbx) by RomarovArt
-Nature's Last Gift by WillBrapLane
-SteamPunk Seahorse by SatiKudasati
-Passive Marker Man Walking by digitallysavvy
+⬇️ Credit for Downloaded Models: <br/>
+Koi Fish Steampunk Airship by Jessica Murano <br/>
+SDC2 Final - Stylized Character by Camille Leclercq <br/>
+The Steampunk Heartglass (fbx) by RomarovArt <br/>
+Nature's Last Gift by WillBrapLane <br/>
+SteamPunk Seahorse by SatiKudasati <br/>
+Passive Marker Man Walking by digitallysavvy <br/>
 Steambot Fly Lod0 by Vziuh
